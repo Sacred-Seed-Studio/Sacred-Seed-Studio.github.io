@@ -1,0 +1,36 @@
+---
+layout: page
+nav_layout: tutorials
+title: Tutorials
+---
+<div class="posts">
+
+    {% for tutorial in site.tutorials %}
+        <section class="post">
+            <header class="post-header">
+                {% if tutorial.avatar %}
+                <img src="" alt="Avatar" class="post-avatar">
+                {% endif %}
+                <h2 class="post-title"><a href="{{ tutorial.url | prepend: site.baseurl }}">{{ tutorial.title }}</a></h2>
+                <p class="post-meta">
+                    {% if tutorial.author %}
+                        <span href="" class="post-author">{{ tutorial.author }}</span>
+                         •
+                    {% endif %}
+                    {{ tutorial.date | date: "%b %-d, %Y" }}
+                </p>
+            </header>
+            <div class="post-description">
+                {{ tutorial.excerpt }}
+                <a href="{{ tutorial.url | prepend: site.baseurl }}" class="continue">Continue reading...</a>
+            </div>
+        </section>
+    {% else %}
+        <section class="post">
+            <header class="post-header">
+                <h2 class="post-title center">Coming soon!</h2>
+            </header>
+        </section>
+    {% endfor %}
+
+</div>

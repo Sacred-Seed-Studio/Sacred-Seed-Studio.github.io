@@ -1,0 +1,193 @@
+#layout,
+#menu,
+.menu-link {
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+#layout {
+    position: relative;
+    padding-left: 0;
+}
+    #layout.active #menu {
+        left: 150px;
+        width: 150px;
+    }
+
+    #layout.active .menu-link {
+        left: 150px;
+    }
+
+.content {
+    margin: 0 auto;
+    padding: 0 2em;
+    max-width: 1200px;
+    margin-bottom: 50px;
+    line-height: 1.6em;
+}
+
+.header {
+     margin: 0;
+     color: #2c3e50;
+     text-align: center;
+     padding: 2.5em 2em 0;
+     border-bottom: 1px solid #bdc3c7;
+ }
+    .header h1 {
+        margin: 0.2em 0;
+        font-size: 2.75em;
+        font-weight: 300;
+    }
+    .header h2 {
+        font-weight: 300;
+        color: #95a5a6;
+        padding: 0;
+        margin-top: 0;
+        margin-bottom: 0.2em;
+    }
+    .header h3 {
+        margin-top: 0;
+        color: #95a5a6;
+    }
+    .header h5 {
+        color: #95a5a6;
+    }
+
+.content-subhead {
+    margin: 50px 0 20px 0;
+    font-weight: 300;
+    color: #888;
+}
+
+#menu {
+    margin-left: -150px; /*#menu width*/
+    width: 150px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+    #menu a {
+        border: none;
+        padding: 0.6em 0 0.6em 0.6em;
+    }
+
+    #menu .pure-menu-heading {
+        background-color: #fff;
+        font-size: 85%;
+        color: #333;
+        margin: 0;
+        text-transform: none;
+    }
+
+     #menu .pure-menu,
+     #menu .pure-menu ul {
+        border: none;
+        background: transparent;
+    }
+
+        #menu .pure-menu-list .pure-menu-item:nth-child(1n) {
+            background: #E57373;
+        }
+
+        #menu .pure-menu-list .pure-menu-item:nth-child(2n) {
+            background: #FFB74D;
+        }
+
+        #menu .pure-menu-list .pure-menu-item:nth-child(3n) {
+            background: #FFF176;
+        }
+
+        #menu .pure-menu-list .pure-menu-item:nth-child(4n) {
+            background: #81C784;
+        }
+
+        #menu .pure-menu-list .pure-menu-item:nth-child(5n) {
+            background: #64B5F6;
+        }
+
+        #menu .pure-menu-list .pure-menu-item:nth-child(6n) {
+            background: #BA68C8;
+        }
+
+        #menu .pure-menu-list a.pure-menu-link:hover,
+        #menu .pure-menu-list a.pure-menu-link:focus {
+            background: transparent;
+        }
+
+        #menu .pure-menu-list .pure-menu-item:hover,
+        #menu .pure-menu-list .pure-menu-item:focus,
+        #menu .pure-menu-heading:hover,
+        #menu .pure-menu-heading:focus,
+        #menu .pure-menu-selected {
+            border-right: 5px solid #616161;
+        }
+
+        #menu .pure-menu-link {
+            color: inherit;
+        }
+
+/* Dynamic Button For Responsive Menu */
+.menu-link {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0; /* "#menu width" */
+    font-size: 10px; /* change this value to increase/decrease button size */
+    z-index: 10;
+    height: auto;
+}
+
+    .menu-link:hover,
+    .menu-link:focus {
+        opacity: 0.5;
+    }
+
+@media (min-width: 48em) {
+
+    .header,
+    .content {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    #layout {
+        padding-left: 150px;
+        left: 0;
+    }
+
+    #menu {
+        left: 150px;
+    }
+
+    .menu-link {
+        position: fixed;
+        left: 150px;
+        display: none;
+    }
+
+    #layout.active .menu-link {
+        left: 150px;
+    }
+}
+
+@media (max-width: 48em) {
+
+    #layout.active {
+        position: relative;
+    }
+
+    .header {
+        padding: 1.5em 1em 0;
+    }
+
+    #menu a {
+        padding: 1em 0 1em 0.6em;
+    }
+}

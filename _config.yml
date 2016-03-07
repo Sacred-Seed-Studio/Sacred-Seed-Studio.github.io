@@ -1,0 +1,50 @@
+# Site settings
+title: Sacred Seed Studio
+description: > # A indie game development studio location in Canada, eh.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://www.sacredseedstudio.com" # the base hostname & protocol for your site
+
+# Contact info
+twitter_username: sacredseedstudio
+github_username:  sacredseedstudio
+email: sss@gmail.com
+
+# Blog settings
+permalink: /blog/:year/:month/:day/:title
+paginate: 6
+paginate_path: "/blog/page/:num"
+
+# Tutorial settings
+collections:
+  tutorials:
+    output: true
+    permalink: "/tutorials/:path"
+
+# Navigation
+navigation:
+- text: Games
+  url: /games/
+  nav_layout: game
+- text: Blog
+  url: /blog/
+  nav_layout: blog
+- text: Tutorials
+  url: /tutorials/
+  nav_layout: tutorials
+- text: About
+  url: /about/
+  nav_layout: about
+
+# Build settings
+markdown: kramdown
+jekyll-minifier:
+  exclude: 'feed.xml' # Exclude files from processing - file name, glob pattern or array of file names and glob patterns
+
+# Plugins
+gems:
+- jekyll-paginate
+# - octopress-paginate
+- jekyll-minifier
+
+# Development
+host: 0.0.0.0

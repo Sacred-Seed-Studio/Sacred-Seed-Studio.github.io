@@ -1,0 +1,14 @@
+---
+layout: page
+nav_layout: game
+title: Games
+---
+<div class="games">
+    {% assign games = site.data.games | sort: 'date' %}
+    {% for game in games | sort: 'date' %}
+        <a class="game" href="{{ game.url | prepend: site.baseurl }}" title="{{ game.name }}">
+            <span class="spacer"></span>
+            <img src="{{ game.screenshot | prepend: site.baseurl }}" alt="game" class="pure-img">
+        </a>
+    {% endfor %}
+</div>

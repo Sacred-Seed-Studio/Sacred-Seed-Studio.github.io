@@ -1,0 +1,18 @@
+---
+layout: home
+page-layout: /
+title: Sacred Seed Studio
+---
+
+<img id="logo-main" src="assets/images/logo-large.png" alt="Sacred Seed Studios Logo">
+
+<div class="blocks">
+
+    {% for link in site.navigation %}
+        <a class="block" href="{{ link.url | prepend: site.baseurl }}">{{ link.text }}</a>
+    {% endfor %}
+
+    <div class="block-full">
+        {% include social.html %}
+    </div>
+</div>
