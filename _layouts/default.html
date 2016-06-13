@@ -7,9 +7,9 @@
 
     {% include header.html %}
 
-    <div id="main">
+    <main {% if page.class %} class="{{page.class}}" {% endif %}>
         {{ content }}
-    </div>
+    </main>
 
     {% include footer.html %}
 

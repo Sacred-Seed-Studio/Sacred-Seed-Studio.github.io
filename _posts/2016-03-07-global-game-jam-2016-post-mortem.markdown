@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Global Game Jam 2016 Postmortem"
-date:   2016-03-05 20:31:34
+date:   2016-03-07 20:31:34
 categories: development gamejam
 class: blog
 ---

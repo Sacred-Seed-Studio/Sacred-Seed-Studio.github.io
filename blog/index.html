@@ -2,50 +2,47 @@
 layout: page
 nav_layout: blog
 title: Blog
+class: blog
 ---
 <div class="posts">
 
     {% for post in paginator.posts %}
-        <section class="post">
-            <header class="post-header">
-                {% if post.avatar %}
-                <img src="" alt="Avatar" class="post-avatar">
-                {% endif %}
-                <h2 class="post-title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-                <p class="post-meta">
-                    {% if post.author %}
-                        <span href="" class="post-author">{{ post.author }}</span>
-                         •
-                    {% endif %}
+        <article>
+            <header>
+                <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+                <p>
                     {{ post.date | date: "%b %-d, %Y" }}
+                    {% if post.author %}
+                         •
+                        <span href="" class="post-author">{{ post.author }}</span>
+                    {% endif %}
                      • Read in {{ post.content | reading_time }}
-                    <!-- {% for category in post.tags %}
-                      <span class="post-category {{category.class}}">{{category.name}}</span>
-                    {% endfor %} -->
                 </p>
+                {% if post.categories %}
+                <ul>
+                    {% for category in post.categories %}
+                        <li><a href="{{ "/categories#" | prepend: site.baseurl | append: category }}">{{ category }}</a></li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
             </header>
             <div class="post-description">
                 {{ post.excerpt }}
                 <a href="{{ post.url | prepend: site.baseurl }}" class="continue">Continue reading...</a>
             </div>
-        </section>
+        </article>
     {% endfor %}
 
     {% if paginator.total_pages > 1 %}
-        <div class="pure-g blog-page-nav">
-            <div class="pure-u-1-3">
-                {% if paginator.previous_page %}
-                  <a href="{{ paginator.previous_page_path | replace: 'index.html', '' }}" class="">Newer</a>
-                {% endif %}
-            </div>
-            <div class="pure-u-1-3">
-                {{ paginator.page }} of {{ paginator.total_pages }}
-            </div>
-            <div class="pure-u-1-3">
-                {% if paginator.next_page %}
-                  <a href="{{ paginator.next_page_path }}" class="demo-nav__button">Older</a>
-                {% endif %}
-            </div>
+        <div class="pagination">
+            <p>{{ paginator.page }} of {{ paginator.total_pages }}</p>
+            {% if paginator.previous_page %}
+              <a href="{{ paginator.previous_page_path | replace: 'index.html', '' }}" class="">Newer</a>
+            {% endif %}
+
+            {% if paginator.next_page %}
+              <a href="{{ paginator.next_page_path }}" class="demo-nav__button">Older</a>
+            {% endif %}
         </div>
     {% endif %}
 

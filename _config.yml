@@ -28,12 +28,6 @@ navigation:
 - text: Blog
   url: /blog/
   nav_layout: blog
-- text: Tutorials
-  url: /tutorials/
-  nav_layout: tutorials
-- text: About
-  url: /about/
-  nav_layout: about
 
 # Build settings
 markdown: kramdown

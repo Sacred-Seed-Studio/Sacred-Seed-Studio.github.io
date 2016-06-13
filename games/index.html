@@ -2,13 +2,16 @@
 layout: page
 nav_layout: game
 title: Games
+class: games
 ---
-<div class="games">
-    {% assign games = site.data.games | sort: 'date' %}
-    {% for game in games | sort: 'date' %}
+<div class="flex-container">
+{% assign games = site.data.games | sort: 'date' %}
+{% for game in games | sort: 'date' %}
+    <article class="flex-item">
         <a class="game" href="{{ game.url | prepend: site.baseurl }}" title="{{ game.name }}">
             <span class="spacer"></span>
             <img src="{{ game.screenshot | prepend: site.baseurl }}" alt="game" class="pure-img">
         </a>
-    {% endfor %}
+    </article>
+{% endfor %}
 </div>

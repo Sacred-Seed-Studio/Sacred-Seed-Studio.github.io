@@ -1,29 +1,7 @@
 ---
 layout: default
-nav_layout: blog
 ---
-<header>
-    <h1>{{ page.title }}</h1>
-    {% if page.subtitle %}
-        <h2>{{ page.subtitle }}</h2>
-    {% endif %}
-    <h3>{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</h3>
-    <h5>Read in {{ page.content | reading_time }}</h5>
-    {% if page.categories %}
-    <ul>
-        {% for category in page.categories %}
-            <!-- {% assign a = site.url %}
-            {% assign b = "/categories" %} -->
-            <li><a href="{{ "/categories#" | prepend: site.baseurl | append: category }}">{{ category }}</a></li>
-        {% endfor %}
-    </ul>
-    {% endif %}
-</header>
-<!-- </div> -->
-
-<article>
-    {{ content }}
-</article>
+{{ content }}
 
 <div class="share">
     <h4>Share this!</h4>

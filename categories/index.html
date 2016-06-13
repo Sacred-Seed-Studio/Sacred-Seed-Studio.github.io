@@ -1,0 +1,35 @@
+---
+layout: page
+title: Posts by Category
+class: blog categories
+---
+
+<article>
+    <h1>{{page.title}}</h1>
+    {% assign categories = site.categories | sort %}
+    <ul>
+        {% for category in categories %}
+            <li>
+                <a href="#{{ category | first | slugify }}">
+                    {{ category[0] | replace:'-', ' ' }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</article>
+
+<!-- <article> -->
+    <div class="flex-container">
+    {% for category in categories %}
+        <article class="flex-item">
+            <a name="{{ category[0] }}"></a><h3>{{ category[0] | replace:'-', ' ' }} <small>({{ category | last | size }})</small> </h3>
+            {% assign sorted_posts = site.posts | sort: 'title' %}
+            {% for post in sorted_posts %}
+                {%if post.categories contains category[0]%}
+                    <h6><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }} <small>{{ post.date |  date: "%B, %Y" }}</small></a></h6>
+                {%endif%}
+            {% endfor %}
+        </article>
+    {% endfor %}
+    </div>
+<!-- </article> -->
