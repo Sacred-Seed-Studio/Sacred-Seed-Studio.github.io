@@ -90,10 +90,72 @@ main {
 
     &.games {
         border-top: 10px solid #81C784;
+
+        .filters {
+            display: block;
+            text-align: center;
+        }
+
+        #gameTextFilter {
+            width: 50%;
+            margin: 0 auto;
+            display: block;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid grey;
+            text-align: center;
+
+            &:focus {
+                outline: none;
+                border-bottom: 1px solid black;
+            }
+        }
+
+
+
+
+        article.flex-item {
+            padding: 0;
+            background: none;
+            border: none;
+            position: relative;
+            flex-grow: 0;
+
+            a {
+                position: relative;
+
+                img {
+                    border: 1px solid #666;
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+                    border-top: 1px solid #666;
+                    border-bottom: 1px solid #666;
+                    width: 100%;
+                }
+            }
+
+            .ribbon {
+                text-align: center;
+                display: block;
+                width: 100%;
+                background: #81C784;
+                border-bottom-right-radius: 5px;
+                border-bottom-left-radius: 5px;
+                border-bottom: 1px solid #666;
+                border-left: 1px solid #666;
+                border-right: 1px solid #666;
+                color: white;
+                font-size: 85%;
+            }
+        }
     }
 
     &.blog {
         border-top: 10px solid #64B5F6;
+
+        article ul {
+            padding-left: 45px;
+        }
     }
 
     &.categories {
@@ -155,14 +217,14 @@ main {
         h3 {
             font-size: 1.2rem;
             margin: 0;
-            color: #95a5a6;
+            color: #7C979F;
             line-height: 2rem;
         }
 
         h5 {
             font-size: 1rem;
             margin: 0 0 0 0;
-            color: #95a5a6;
+            color: #7C979F;
             line-height: 1.2rem;
         }
     }
@@ -199,6 +261,16 @@ main {
         margin-bottom: 2.25rem;
         border: 1px solid #ddd;
         border-top: 5px solid #666;
+        box-shadow: 5px 10px 0px rgba(0,0,0,0.01);
+
+        > h1,
+        > h2,
+        > h3,
+        > h4,
+        > h5,
+        > h6 {
+            margin-top: 0;
+        }
 
         header {
             h2 {
@@ -299,16 +371,17 @@ path { transition: fill .4s ease; }
 }
 
 .youtube:hover svg{
-    fill: #e52d27;
+    fill: #e52d27 !important;
 }
 .gplus:hover svg{
-    fill: #DC4E41;
+    fill: #DC4E41 !important;
 }
 
 .github:hover svg {
-    fill: #000;
-    stroke: #FFF;
-    stroke-width: 0.25;
+    fill: #4078c0 !important;
+    // fill: #000;
+    // stroke: #FFF;
+    // stroke-width: 0.25;
 }
 
 .top:hover svg {
@@ -316,8 +389,8 @@ path { transition: fill .4s ease; }
 }
 
 .pagination {
-    font-size: 1.5rem;
-    line-height: 1.6rem;
+    font-size: 1rem;
+    line-height: 1rem;
     text-align: center;
     p {
         margin: 0;
@@ -372,17 +445,17 @@ path { transition: fill .4s ease; }
         max-width: 25%;
     }
     main {
-        padding: 100px 75px 75px
+        padding: 100px 75px 125px
     }
 }
 
 @media (min-width: 1400px){
     html {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
     }
-    body > header img {
-        max-width: 25%;
-    }
+    // body > header img {
+    //     max-width: 25%;
+    // }
     footer a {
         width: 48px;
         height: 48px;
@@ -391,12 +464,12 @@ path { transition: fill .4s ease; }
 }
 
 @media (min-width: 1800px){
-    html {
-        font-size: 1.95rem;
-    }
-    body > header img {
-        max-width: 25%;
-    }
+    // html {
+    //     font-size: 1.95rem;
+    // }
+    // body > header img {
+    //     max-width: 25%;
+    // }
     main {
         padding: 150px 75px 150px;
 
@@ -428,22 +501,8 @@ path { transition: fill .4s ease; }
         flex: 1 0 20%;
     }
 }
-// @media (min-width: 48em) {
-//     #home {
-//         position: absolute;
-//         top: 0;
-//         bottom: 0;
-//         left: 0;
-//         right: 0;
-//     }
-//     #home #logo-main {
-//         height: 85%;
-//         width: auto;
-//     }
-//     #home .block {
-//         padding: 25px;
-//     }
-//     #home .block-full {
-//         padding: 25px;
-//     }
-// }
+
+
+.hidden {
+    display: none;
+}

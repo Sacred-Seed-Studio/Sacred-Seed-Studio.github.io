@@ -4,14 +4,87 @@ nav_layout: game
 title: Games
 class: games
 ---
+<!-- <input type="search" placeholder="Search" id="gameTextFilter">
+<div class="filters">
+    <label>
+        <input type="checkbox" id="fullgamecheck" checked="checked">
+        Full Game
+    </label>
+
+    <label>
+        <input type="checkbox" id="hackathoncheck" checked="checked">
+        Hackathon
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" id="gamejamcheck" checked="checked">
+        Game Jam
+    </label>
+    <label>
+        <input type="checkbox" id="experimentcheck" checked="checked">
+        Experiment
+    </label>
+</div>
+</input> -->
+
 <div class="flex-container">
 {% assign games = site.data.games | sort: 'date' %}
+
 {% for game in games | sort: 'date' %}
-    <article class="flex-item">
+    <article class="flex-item {{game.type_class}} {{game.name}}">
         <a class="game" href="{{ game.url | prepend: site.baseurl }}" title="{{ game.name }}">
-            <span class="spacer"></span>
-            <img src="{{ game.screenshot | prepend: site.baseurl }}" alt="game" class="pure-img">
+            <img src="{{ game.screenshot | prepend: site.baseurl }}" alt="game">
+            <span class="ribbon">{{game.date | date: '%B %Y'}}
+            {% if game.type %}
+                &#9679;
+                {{game.type}}
+            {% endif %}
         </a>
     </article>
 {% endfor %}
 </div>
+
+<!-- <script>
+    var search = document.getElementById('gameTextFilter');
+    var cbFullGame = document.getElementById('fullgamecheck');
+    var cbHackathon = document.getElementById('hackathoncheck');
+    var cbGameJam = document.getElementById('gamejamcheck');
+    var cbExperiment = document.getElementById('experimentcheck');
+
+    function updateFilter(){
+        var checked = []
+        if (cbFullGame.checked) { checked.push('release'); }
+        if (cbHackathon.checked) { checked.push('hackathon'); }
+        if (cbGameJam.checked) { checked.push('gamejam'); }
+        if (cbExperiment.checked) { checked.push('experiment'); }
+
+        document.querySelectorAll('.flex-item').forEach(function(n){
+            var found = false,
+                checkFound = false;
+                classes = [];
+
+            n.classList.forEach(function(n){ if(n!= "flex-item"){ classes.push(n) } });
+            if (classes.some(function(n){
+                if (search.value){
+                    return search.value.split(" ").filter(function(m){return m!=="";}).some(function(m){
+                        return n.toLowerCase().indexOf(m.toLowerCase()) > -1;
+                    });
+                }
+                else { return true; }
+            })) {
+                found = true;
+            }
+
+            checked.forEach(function(m){ if (n.classList.contains(m)){ checkFound = true; } });
+
+            if (found && checkFound) { n.classList.remove("hidden"); }
+            else { n.classList.add("hidden"); }
+        });
+    }
+
+    search.addEventListener('input', updateFilter);
+    cbFullGame.addEventListener('change', updateFilter);
+    cbHackathon.addEventListener('change', updateFilter);
+    cbGameJam.addEventListener('change', updateFilter);
+    cbExperiment.addEventListener('change', updateFilter);
+</script> -->

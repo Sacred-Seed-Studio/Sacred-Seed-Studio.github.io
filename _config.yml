@@ -29,6 +29,13 @@ navigation:
   url: /blog/
   nav_layout: blog
 
+game_types:
+  hackathon
+  gamejam
+  release
+  experiment
+
+
 # Build settings
 markdown: kramdown
 jekyll-minifier:
@@ -38,7 +45,7 @@ jekyll-minifier:
 gems:
 - jekyll-paginate
 # - octopress-paginate
-- jekyll-minifier
+# - jekyll-minifier
 
 # Development
 host: 0.0.0.0
