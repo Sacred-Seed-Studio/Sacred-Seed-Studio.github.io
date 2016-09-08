@@ -1,1 +1,43 @@
-(function(f,a){var e=a.getElementById("layout"),h=a.getElementById("menu"),c=a.getElementById("menuLink"),d=a.getElementById("main");function b(l,m){var k=l.className.split(/\s+/),n=k.length,j=0;for(;j<n;j++){if(k[j]===m){k.splice(j,1);break;}}if(n===k.length){k.push(m);}l.className=k.join(" ");}c.onclick=function(i){g(i);};d.onclick=function(i){if(h.className.indexOf("active")!=-1){g(i);}};function g(j){var i="active";j.preventDefault();b(e,i);b(h,i);b(c,i);}}(this,this.document));
+(function (window, document) {
+
+    var layout   = document.getElementById('layout'),
+        menu     = document.getElementById('menu'),
+        menuLink = document.getElementById('menuLink'),
+        content  = document.getElementById('main');
+
+    function toggleClass(element, className) {
+        var classes = element.className.split(/\s+/),
+            length = classes.length,
+            i = 0;
+
+        for(; i < length; i++) {
+          if (classes[i] === className) {
+            classes.splice(i, 1);
+            break;
+          }
+        }
+        // The className is not found
+        if (length === classes.length) {
+            classes.push(className);
+        }
+
+        element.className = classes.join(' ');
+    }
+
+    menuLink.onclick = function(e){toggleAll(e);};
+
+    content.onclick = function(e){
+        if (menu.className.indexOf("active") != -1){
+            toggleAll(e);
+        }
+    };
+
+    function toggleAll(e){
+        var active = 'active';
+        e.preventDefault();
+        toggleClass(layout, active);
+        toggleClass(menu, active);
+        toggleClass(menuLink, active);
+    }
+
+}(this, this.document));
