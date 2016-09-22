@@ -712,23 +712,32 @@ main {
       flex-grow: 0; }
       main.games article.flex-item a {
         position: relative; }
-        main.games article.flex-item a img {
-          border: 1px solid #666;
-          border-top-left-radius: 5px;
-          border-top-right-radius: 5px;
-          border-top: 1px solid #666;
-          border-bottom: 1px solid #666;
-          width: 100%; }
+        main.games article.flex-item a .img-holder {
+          background: #232526;
+          /* fallback for old browsers */
+          background: -webkit-linear-gradient(to left, #232526, #414345);
+          /* Chrome 10-25, Safari 5.1-6 */
+          background: linear-gradient(to left, #232526, #414345);
+          /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+          color: white; }
+          main.games article.flex-item a .img-holder img {
+            width: 100%;
+            max-height: 100px;
+            min-height: 100px;
+            object-fit: cover; }
+          main.games article.flex-item a .img-holder .no-img {
+            line-height: 100px;
+            text-align: center;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center; }
       main.games article.flex-item .ribbon {
         text-align: center;
         display: block;
         width: 100%;
         background: #81C784;
-        border-bottom-right-radius: 5px;
-        border-bottom-left-radius: 5px;
-        border-bottom: 1px solid #666;
-        border-left: 1px solid #666;
-        border-right: 1px solid #666;
         color: white;
         font-size: 85%; }
   main.blog {
