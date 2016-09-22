@@ -4,7 +4,7 @@ nav_layout: game
 title: Games
 class: games
 ---
-<!-- <input type="search" placeholder="Search" id="gameTextFilter">
+<input type="search" placeholder="Search" id="gameTextFilter">
 <div class="filters">
     <label>
         <input type="checkbox" id="fullgamecheck" checked="checked">
@@ -25,15 +25,25 @@ class: games
         Experiment
     </label>
 </div>
-</input> -->
+</input>
 
 <div class="flex-container">
 {% assign games = site.data.games | sort: 'date' %}
 
-{% for game in games | sort: 'date' %}
+{% for game in games reversed | sort: 'date' %}
     <article class="flex-item {{game.type_class}} {{game.name}}">
-        <a class="game" href="{{ game.url | prepend: site.baseurl }}" title="{{ game.name }}">
-            <img src="{{ game.screenshot | prepend: site.baseurl }}" alt="game">
+        {% if game.url %}
+            <a class="game" href="{{ game.url | prepend: site.baseurl }}" title="{{ game.name }}">
+        {% else %}
+            <a class="game" title="{{ game.name }}">
+        {% endif %}
+            <div class="img-holder">
+                {% if game.screenshot %}
+                    <img src="{{ game.screenshot | prepend: site.baseurl }}" alt="{{game.name}}">
+                {% else %}
+                    <p class="no-img">{{game.name}}</p>
+                {% endif %}
+            </div>
             <span class="ribbon">{{game.date | date: '%B %Y'}}
             {% if game.type %}
                 &#9679;
@@ -44,7 +54,7 @@ class: games
 {% endfor %}
 </div>
 
-<!-- <script>
+<script>
     var search = document.getElementById('gameTextFilter');
     var cbFullGame = document.getElementById('fullgamecheck');
     var cbHackathon = document.getElementById('hackathoncheck');
@@ -87,4 +97,4 @@ class: games
     cbHackathon.addEventListener('change', updateFilter);
     cbGameJam.addEventListener('change', updateFilter);
     cbExperiment.addEventListener('change', updateFilter);
-</script> -->
+</script>
