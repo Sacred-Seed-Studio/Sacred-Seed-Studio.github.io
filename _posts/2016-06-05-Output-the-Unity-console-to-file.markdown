@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Output the Unity console to file"
-date:   2016-06-05 20:31:34
-categories: development unity debug log
+date:   2016-06-05
+categories: unity tutorial asset
 class: blog
 author: "Joel Kuntz"
 ---
@@ -206,7 +206,7 @@ public class DebugTester : MonoBehaviour
 
 Congratulations, if you've followed along you now have the basics of logging out to a file. I didn't intend to cover everything I've already implemented, but rather show you the method I used to develop this project. I hope if you like this style you will use it and even contribute to the project. Now that you have your logs in JSON format you can use various tools to view and filter them. I've written an HTML page in the project which you can demo [here](http://www.sacredseedstudio.com/Unity-File-Debug/). You could also use a command line tool like [jq](https://stedolan.github.io/jq/), or even languages such as node.js or python. 
 
-<img alt="HTML viewer" src="{{site.base-url}}/assets/images/blog/unityFileDebug/screenshot.png" class="pure-img">
+<img alt="HTML viewer" src="{{site.base-url}}/assets/images/blog/unityFileDebug/screenshot.png">
 
 I've included a list of other interesting Unity Console tutorials/scripts below if this is only starting the gears in your head.
 

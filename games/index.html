@@ -25,7 +25,6 @@ class: games
         Experiment
     </label>
 </div>
-</input>
 
 <div class="flex-container">
 {% assign games = site.data.games | sort: 'date' %}
@@ -44,11 +43,14 @@ class: games
                     <p class="no-img">{{game.name}}</p>
                 {% endif %}
             </div>
-            <span class="ribbon">{{game.date | date: '%B %Y'}}
+            <h2 class="ribbon">
+            {{game.name}} &#9679;
+            {{game.date | date: '%B %Y'}}
             {% if game.type %}
                 &#9679;
                 {{game.type}}
             {% endif %}
+            </h2>
         </a>
     </article>
 {% endfor %}
@@ -62,7 +64,7 @@ class: games
     var cbExperiment = document.getElementById('experimentcheck');
 
     function updateFilter(){
-        var checked = []
+        var checked = [];
         if (cbFullGame.checked) { checked.push('release'); }
         if (cbHackathon.checked) { checked.push('hackathon'); }
         if (cbGameJam.checked) { checked.push('gamejam'); }
@@ -70,10 +72,10 @@ class: games
 
         document.querySelectorAll('.flex-item').forEach(function(n){
             var found = false,
-                checkFound = false;
+                checkFound = false,
                 classes = [];
 
-            n.classList.forEach(function(n){ if(n!= "flex-item"){ classes.push(n) } });
+            n.classList.forEach(function(n){ if(n!= "flex-item"){ classes.push(n); } });
             if (classes.some(function(n){
                 if (search.value){
                     return search.value.split(" ").filter(function(m){return m!=="";}).some(function(m){

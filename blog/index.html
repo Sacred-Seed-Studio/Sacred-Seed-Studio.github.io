@@ -14,12 +14,12 @@ class: blog
                     {{ post.date | date: "%b %-d, %Y" }}
                     {% if post.author %}
                          •
-                        <span href="" class="post-author">{{ post.author }}</span>
+                        <span class="post-author">{{ post.author }}</span>
                     {% endif %}
                      • Read in {{ post.content | reading_time }}
                 </p>
                 {% if post.categories %}
-                <ul>
+                <ul class="no-pad">
                     {% for category in post.categories %}
                         <li><a href="{{ "/categories#" | prepend: site.baseurl | append: category }}">{{ category }}</a></li>
                     {% endfor %}

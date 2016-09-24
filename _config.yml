@@ -7,7 +7,7 @@ url: "http://www.sacredseedstudio.com" # the base hostname & protocol for your s
 # Contact info
 twitter_username: sacredseedstudio
 github_username:  sacredseedstudio
-email: sss@gmail.com
+email: sacredseedstudio@gmail.com
 
 # Blog settings
 permalink: /blog/:year/:month/:day/:title
@@ -15,10 +15,10 @@ paginate: 6
 paginate_path: "/blog/page/:num"
 
 # Tutorial settings
-collections:
-  tutorials:
-    output: true
-    permalink: "/tutorials/:path"
+# collections:
+#   tutorials:
+#     output: true
+#     permalink: "/tutorials/:path"
 
 # Navigation
 navigation:
@@ -35,7 +35,6 @@ game_types:
   release
   experiment
 
-
 # Build settings
 markdown: kramdown
 jekyll-minifier:
@@ -44,8 +43,7 @@ jekyll-minifier:
 # Plugins
 gems:
 - jekyll-paginate
-# - octopress-paginate
-# - jekyll-minifier
+- jekyll-minifier
 
 # Development
 host: 0.0.0.0

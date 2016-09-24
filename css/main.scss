@@ -154,7 +154,9 @@ main {
                 width: 100%;
                 background: #81C784;
                 color: white;
-                font-size: 85%;
+                font-size: 50%;
+                margin: 0;
+                font-weight: initial;
             }
         }
     }
@@ -388,9 +390,6 @@ path { transition: fill .4s ease; }
 
 .github:hover svg {
     fill: #4078c0 !important;
-    // fill: #000;
-    // stroke: #FFF;
-    // stroke-width: 0.25;
 }
 
 .top:hover svg {
@@ -514,4 +513,7 @@ path { transition: fill .4s ease; }
 
 .hidden {
     display: none;
+}
+.no-pad {
+    padding: 0 !important;
 }

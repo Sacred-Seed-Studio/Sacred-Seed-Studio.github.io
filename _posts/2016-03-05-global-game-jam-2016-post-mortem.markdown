@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Global Game Jam 2016 Postmortem"
-date:   2016-03-05 20:31:34
-categories: development gamejam
+date:   2016-03-05
+categories: gamejam
 class: blog
 ---
 To introduce us and finally launch our website we decided what better way then to do a postmortem of Global Game Jam 2016!
@@ -10,9 +10,9 @@ To introduce us and finally launch our website we decided what better way then t
 For our second GGJ together we decided to focus on a smaller game, which allowed us to actually complete it this year! For the theme: Ritual, we created a game where you are in charge of collecting holy water for your village each day. To complete the ritual, you must pray to different gods each day to grant access to the river water. You can read more about it 
 [here]({{site.base-url}}/games/ritual-river).
 
-<img alt="Ideas are flowing" src="{{site.base-url}}/assets/images/blog/ggj2016/start.jpg" class="pure-img">
+<img alt="Ideas are flowing" src="{{site.base-url}}/assets/images/blog/ggj2016/start.jpg">
 
-<img alt="Ritual River Spritesheet" src="{{site.base-url}}/assets/images/blog/ggj2016/title.png" class="pure-img">
+<img alt="Ritual River Spritesheet" src="{{site.base-url}}/assets/images/blog/ggj2016/title.png">
 
 This year's jam was again hosted at Volta, this time at their new location (which was awesome!). A huge thank you to everyone involved setting it up, as it was a great place to jam and meet new people.
 
@@ -30,7 +30,7 @@ Our reasoning you ask? Sometimes we have multiple projects in one repository and
 
 Overall I learned a lot this weekend and remembered why I love programming in Unity in the first place. I look forward to finishing school and having more time to work on more projects and game jams!
 
-<img alt="Ritual River Spritesheet" src="{{site.base-url}}/assets/images/blog/ggj2016/game.png" class="pure-img">
+<img alt="Ritual River Spritesheet" src="{{site.base-url}}/assets/images/blog/ggj2016/game.png">
 
 ## Sarah
 
@@ -48,6 +48,6 @@ I had a great time at this year’s Global Game Jam. It felt great to put all al
 
 Shown below is the sprite sheet I made as the hero in our game Ritual River. Seeing as we only had 48 hours to fully complete our project, we decided it was a good idea to keep it simple. It turns out all you need to have a functioning walking animation is 20 sprites; many of which are copies. The 4  left most sprites are the idle sprites, and each other row is a direction of the walking animation. Notice how when his leg is behind the other I’ve made it slightly darker to help create the illusion of walking.
 
-<img alt="Ritual River Spritesheet" src="{{site.base-url}}/assets/images/blog/ggj2016/sprite.png" class="pure-img">
+<img alt="Ritual River Spritesheet" src="{{site.base-url}}/assets/images/blog/ggj2016/sprite.png">
 
 I’m looking forward to our future projects so I can learn more about the basics of sprite design and making image assets for games!
