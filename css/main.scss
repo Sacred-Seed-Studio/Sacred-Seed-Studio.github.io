@@ -276,11 +276,13 @@ main {
 
         > h1,
         > h2,
-        > h3,
-        > h4,
         > h5,
         > h6 {
             margin-top: 0;
+        }
+        > h3,
+        > h4 {
+            margin-top: 1rem;
         }
 
         header {
@@ -516,4 +518,10 @@ path { transition: fill .4s ease; }
 }
 .no-pad {
     padding: 0 !important;
+}
+.note {
+    background: #FFF69A;
+    border-left: 4px solid #333;
+    padding: 10px;
+    display: inline-block;
 }
