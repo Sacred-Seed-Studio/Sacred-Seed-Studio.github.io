@@ -2,11 +2,11 @@
 layout: post
 title:  "Setting up a Unity dev environment on Windows"
 date:   2016-09-25
-categories: tutorial unity git
+categories: tutorial unity git windows
 class: blog
 author: "Joel Kuntz"
 ---
-Whether you are just starting with Unity, reinstalling your operating system, or helping a friend; we all have to setup development environements. I frequently do this and there are several essential things needed for a well rounded environement. I hope to share my insights so that you can create your own environment and start making games in Unity right now.
+Whether you are just starting with Unity, reinstalling your operating system, or helping a friend; we all have to setup development environments. I frequently do this and there are several essential things needed for a well rounded environment. I hope to share my insights so that you can create your own environment and start making games in Unity right now.
 Programs to install:  
 
 * [Unity](https://unity3d.com/) (the installer includes Visual Studio, the IDE I use)
