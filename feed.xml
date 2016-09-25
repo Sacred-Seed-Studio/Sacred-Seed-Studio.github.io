@@ -5,9 +5,161 @@
     <description></description>
     <link>http://www.sacredseedstudio.com/</link>
     <atom:link href="http://www.sacredseedstudio.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 22 Sep 2016 08:42:01 -0300</pubDate>
-    <lastBuildDate>Thu, 22 Sep 2016 08:42:01 -0300</lastBuildDate>
-    <generator>Jekyll v3.1.6</generator>
+    <pubDate>Sun, 25 Sep 2016 16:48:46 -0300</pubDate>
+    <lastBuildDate>Sun, 25 Sep 2016 16:48:46 -0300</lastBuildDate>
+    <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>Setting up a Unity dev environment on Windows</title>
+        <description>&lt;p&gt;Whether you are just starting with Unity, reinstalling your operating system, or helping a friend; we all have to setup development environements. I frequently do this and there are several essential things needed for a well rounded environement. I hope to share my insights so that you can create your own environment and start making games in Unity right now.
+Programs to install:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://unity3d.com/&quot;&gt;Unity&lt;/a&gt; (the installer includes Visual Studio, the IDE I use)&lt;/li&gt;
+  &lt;li&gt;git (see below)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;step-1-install-unity-and-idetext-editor&quot;&gt;Step 1: Install Unity and IDE/Text Editor&lt;/h3&gt;
+&lt;p&gt;The installer for Unity now has Visual Studio (Community version), where it used to include MonoDevelop. VS is a heavy IDE to start up, but it is very powerful for C#, which is the language we recommend using over Javascript. If you don’t want something as heavy as VS, you can also download &lt;a href=&quot;https://www.sublimetext.com/3&quot;&gt;Sublime Text 3&lt;/a&gt;, &lt;a href=&quot;https://atom.io/&quot;&gt;Atom&lt;/a&gt;, or &lt;a href=&quot;https://code.visualstudio.com/&quot;&gt;VS Code&lt;/a&gt; and use those instead. To change the IDE/text editor connected to Unity, inside a project, go to &lt;code class=&quot;highlighter-rouge&quot;&gt;Edit &amp;gt; Preferences... &amp;gt; External Tools&lt;/code&gt; and browse to find your editor of choice.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;Unity Editor Git Settings&quot; src=&quot;/assets/images/blog/unitydevenv/ChangeTextEditor.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;step-2-install-git&quot;&gt;Step 2: Install Git&lt;/h3&gt;
+&lt;p&gt;Windows 10 recently added the Windows Subsystem for Linux which allows you to run Ubuntu Bash. This is my favorite way to use git on windows. You can &lt;a href=&quot;http://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/&quot;&gt;install WSL&lt;/a&gt; and run &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo apt install git&lt;/code&gt;, or alternatively get &lt;a href=&quot;https://git-scm.com/downloads&quot;&gt;native applications&lt;/a&gt; of git, including some GUI applications like &lt;a href=&quot;https://www.sourcetreeapp.com/&quot;&gt;Sourcetree&lt;/a&gt; or &lt;a href=&quot;https://desktop.github.com/&quot;&gt;GitHub Desktop&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p class=&quot;note&quot;&gt;If you aren't familiar with version control, you should be. It allows you to backup your project, tag points in time that can be referenced later, and easily work with a team or on an open source porject. I can't overstate this! Please trust me when I say it will save you from frustration in the future. &lt;a href=&quot;https://git-scm.com/book/en/v2&quot;&gt;Learn git&lt;/a&gt; and go backup your projects now. Both &lt;a href=&quot;https://github.com/&quot;&gt;github&lt;/a&gt; and &lt;a href=&quot;https://bitbucket.org/&quot;&gt;bitbucket&lt;/a&gt; offer good free options.&lt;/p&gt;
+
+&lt;p class=&quot;note&quot;&gt;If you're a student, go get the &lt;a href=&quot;https://education.github.com/pack&quot;&gt;GitHub Student Developer Pack.&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;step-3-creating-a-project-and-changing-project-settings&quot;&gt;Step 3: Creating a Project and Changing Project Settings&lt;/h3&gt;
+&lt;p&gt;Open Unity and log in to your account to be able to create a new project. You can choose where to save your project and whether or not it should be 2D or 3D. If you create a project and it’s not the dimension you want, you can change between 2D and 3D by going to &lt;code class=&quot;highlighter-rouge&quot;&gt;Edit &amp;gt; Project Settings &amp;gt; Editor&lt;/code&gt;. Some versions of Unity contain a bug that creates a project and it doesn’t use the dimension you asked for, if that happens, just change your settings and then create a new scene to see the correct camera style.&lt;/p&gt;
+
+&lt;p&gt;Each time you create a new Unity project, you’ll need to change some settings to work with version control. I’m assuming this methodology will work for more than just git, but that’s what we will be using. Inside your unity project, go to &lt;code class=&quot;highlighter-rouge&quot;&gt;Edit &amp;gt; Project Settings &amp;gt; Editor&lt;/code&gt; and change &lt;code class=&quot;highlighter-rouge&quot;&gt;Version Control&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;Visible Meta Files&lt;/code&gt;. You will also need to change &lt;code class=&quot;highlighter-rouge&quot;&gt;Asset Serialization&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;Force Text&lt;/code&gt;. Most version controls work in deltas or diffs, and it’s a lot easier for them to work in text than binary.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;Unity Editor Git Settings&quot; src=&quot;/assets/images/blog/unitydevenv/UnityEditorSettingsForGit.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;step-4-creating-a-repository&quot;&gt;Step 4: Creating a Repository&lt;/h3&gt;
+
+&lt;h4 id=&quot;i-setup&quot;&gt;i: Setup&lt;/h4&gt;
+&lt;p&gt;You will now need to setup your repository, repo for short. You can make a repository in two ways, whether or not you have or haven’t started your project yet.&lt;/p&gt;
+
+&lt;p&gt;The first way is through bash (or your command line):&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mkdir my-new-project
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;my-new-project
+git init&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The second way is through an online interface: github(shown)
+&lt;img alt=&quot;Unity Editor Git Settings&quot; src=&quot;/assets/images/blog/unitydevenv/GithubUnityProject.png&quot; /&gt;
+There are some important settings when creating a repo on Github:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Public/Private toggle&lt;/code&gt; If you have paid/copyrighted assets you should either not commit the assets to the repository or have a private repository.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Readme &amp;amp; license&lt;/code&gt; If you are creating something open source, a readme and proper license are important and informative. MIT is a very permissive license for open source.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;ii-gitignore&quot;&gt;ii: GitIgnore&lt;/h4&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;.gitignore&lt;/code&gt; Is a special file that tells git what we don’t want committed to the repository. This is used for binaries, assets, and Unity Editor/IDE created files that only slow things down and cause headaches for us and others accessing our project. &lt;a href=&quot;https://github.com/github/gitignore/blob/master/Unity.gitignore&quot;&gt;github hosts the unity one&lt;/a&gt; like is selected above.&lt;/p&gt;
+
+&lt;p&gt;If you went the command line route, there will be a hidden file named &lt;code class=&quot;highlighter-rouge&quot;&gt;.gitignore&lt;/code&gt; in the root of your repository. You can open it and view it in a text editor. &lt;em&gt;It should be the very first thing you commit&lt;/em&gt;. The &lt;code class=&quot;highlighter-rouge&quot;&gt;.gitignore&lt;/code&gt; below will assume you have your Unity Project at the root of your repository.&lt;/p&gt;
+
+&lt;p class=&quot;note&quot;&gt;If you want your Unity Project to be nested or to have multiple projects in this repo then simply remove the leading /&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/Assets/AssetStoreTools&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Autogenerated VS/MD/Consulo solution and project files&lt;/span&gt;
+ExportedObj/
+.consulo/
+&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.csproj
+&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.unityproj
+&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.sln
+&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.suo
+&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.tmp
+&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.user
+&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.userprefs
+&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.pidb
+&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.booproj
+&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.svd
+&lt;span class=&quot;c&quot;&gt;# Unity3D generated meta files&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.pidb.meta
+&lt;span class=&quot;c&quot;&gt;# Unity3D Generated File On Crash Reports&lt;/span&gt;
+sysinfo.txt
+&lt;span class=&quot;c&quot;&gt;# Builds&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.apk
+&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.unitypackage&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h4 id=&quot;iii-committing-and-pushing&quot;&gt;iii: Committing and Pushing&lt;/h4&gt;
+&lt;p&gt;Move your Unity project into your repository folder. You’ll need to close Unity before doing this. Now that we have our gitignore it will be safe to move it all over as we only will add &lt;code class=&quot;highlighter-rouge&quot;&gt;Assets/&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;Project Settings/&lt;/code&gt; to commit as the rest is autogenerated by Unity and our IDE. Unity project structure usually looks like this:&lt;/p&gt;
+&lt;p class=&quot;note&quot;&gt; Sometimes when you're moving a project, a Unity Lock file won't want to move and will cause trouble, skipping that file is ok.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;my-new-project/
+├── Assets
+├── Library
+├── ProjectSettings
+└── Temp&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The following commands will add the files in your new project to be committed, review the commit, make the commit, then push to your remote (Github etc). If this is confusing, again, &lt;a href=&quot;https://git-scm.com/book/en/v2&quot;&gt;Learn git&lt;/a&gt;.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git add Assets/ ProjectSettings/
+git status &lt;span class=&quot;c&quot;&gt;#Review what we have staged before committing&lt;/span&gt;
+git commit -m &lt;span class=&quot;s1&quot;&gt;'Initial unity project commit.'&lt;/span&gt;
+git push origin master &lt;span class=&quot;c&quot;&gt;# If you are setup to a remote like github/bitbucket&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;step-5-find-create-and-edit-assets&quot;&gt;Step 5: Find, Create and Edit Assets&lt;/h3&gt;
+&lt;p&gt;Now that you have a project and a repo, you’ll need some assets for your game, and ways of dealing with them.&lt;/p&gt;
+
+&lt;h4 id=&quot;finding-assets&quot;&gt;Finding Assets:&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://opengameart.org/&quot;&gt;Open Game Art&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://kenney.nl/assets&quot;&gt;Kenney&lt;/a&gt; offers free assets on Open Game Art, but he does amazing work and it’s definitely worth it to support him and buy his art&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://incompetech.com/&quot;&gt;Incompetech&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;creating-and-editing-assets&quot;&gt;Creating and Editing Assets:&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.audacityteam.org/&quot;&gt;Audacity&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.blender.org/&quot;&gt;Blender&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.getpaint.net/download.html&quot;&gt;Paint.NET&lt;/a&gt; or &lt;a href=&quot;https://www.gimp.org/&quot;&gt;GIMP&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.mapeditor.org/&quot;&gt;Tiled&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;cool-people-and-repositories&quot;&gt;Cool People and Repositories:&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/keijiro&quot;&gt;Keijiro Takahashi&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/prime31&quot;&gt;Prime 31&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Unity &lt;a href=&quot;https://bitbucket.org/Unity-Technologies/&quot;&gt;Bitbucket&lt;/a&gt; . &lt;a href=&quot;https://github.com/Unity-Technologies&quot;&gt;GitHub&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/RyanNielson/awesome-unity&quot;&gt;Awesome Unity&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You are now ready to begin (or continue) your game development journey. A few bits of closing advice:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Commit &lt;a href=&quot;https://en.wikipedia.org/wiki/Atomic_commit#Atomic_commit_convention&quot;&gt;atomically&lt;/a&gt; and commit often&lt;/li&gt;
+  &lt;li&gt;Write meaningful &lt;a href=&quot;http://chris.beams.io/posts/git-commit/&quot;&gt;commit messages&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;ALWAYS push new commits to your remote&lt;/li&gt;
+  &lt;li&gt;Use &lt;a href=&quot;https://git-scm.com/book/en/v2/Git-Basics-Tagging&quot;&gt;git tags&lt;/a&gt; for milestones&lt;/li&gt;
+  &lt;li&gt;Have a &lt;a href=&quot;http://blog.theknightsofunity.com/7-ways-keep-unity-project-organized/&quot;&gt;well organized&lt;/a&gt; unity project&lt;/li&gt;
+  &lt;li&gt;If you are working solo it is generally fine to work off the master branch. If you are working on a team, learn the &lt;a href=&quot;https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell&quot;&gt;power of branches&lt;/a&gt; and decide on a workflow(&lt;a href=&quot;https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows&quot;&gt;1&lt;/a&gt;, &lt;a href=&quot;https://git-scm.com/book/en/v2/Distributed-Git-Distributed-Workflows#_distributed_git&quot;&gt;2&lt;/a&gt;, &lt;a href=&quot;https://www.atlassian.com/git/tutorials/comparing-workflows/&quot;&gt;3&lt;/a&gt;, &lt;a href=&quot;https://guides.github.com/introduction/flow/&quot;&gt;4&lt;/a&gt;) with your team to avoid conflicts and wasted time.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Good luck explorers!&lt;/p&gt;
+</description>
+        <pubDate>Sat, 24 Sep 2016 00:00:00 -0300</pubDate>
+        <link>http://www.sacredseedstudio.com/blog/2016/09/24/windows-unity-dev-environment</link>
+        <guid isPermaLink="true">http://www.sacredseedstudio.com/blog/2016/09/24/windows-unity-dev-environment</guid>
+        
+        
+        <category>tutorial</category>
+        
+        <category>unity</category>
+        
+        <category>git</category>
+        
+      </item>
     
       <item>
         <title>Output the Unity console to file</title>
@@ -201,7 +353,7 @@
 
 &lt;p&gt;Congratulations, if you’ve followed along you now have the basics of logging out to a file. I didn’t intend to cover everything I’ve already implemented, but rather show you the method I used to develop this project. I hope if you like this style you will use it and even contribute to the project. Now that you have your logs in JSON format you can use various tools to view and filter them. I’ve written an HTML page in the project which you can demo &lt;a href=&quot;http://www.sacredseedstudio.com/Unity-File-Debug/&quot;&gt;here&lt;/a&gt;. You could also use a command line tool like &lt;a href=&quot;https://stedolan.github.io/jq/&quot;&gt;jq&lt;/a&gt;, or even languages such as node.js or python.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;HTML viewer&quot; src=&quot;/assets/images/blog/unityFileDebug/screenshot.png&quot; class=&quot;pure-img&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;HTML viewer&quot; src=&quot;/assets/images/blog/unityFileDebug/screenshot.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I’ve included a list of other interesting Unity Console tutorials/scripts below if this is only starting the gears in your head.&lt;/p&gt;
 
@@ -213,18 +365,16 @@
   &lt;li&gt;&lt;a href=&quot;http://www.tallior.com/pimp-my-debug-log/&quot;&gt;Pimp my Debug.Log&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Sun, 05 Jun 2016 17:31:34 -0300</pubDate>
+        <pubDate>Sun, 05 Jun 2016 00:00:00 -0300</pubDate>
         <link>http://www.sacredseedstudio.com/blog/2016/06/05/Output-the-Unity-console-to-file</link>
         <guid isPermaLink="true">http://www.sacredseedstudio.com/blog/2016/06/05/Output-the-Unity-console-to-file</guid>
         
         
-        <category>development</category>
-        
         <category>unity</category>
         
-        <category>debug</category>
+        <category>tutorial</category>
         
-        <category>log</category>
+        <category>asset</category>
         
       </item>
     
@@ -235,9 +385,9 @@
 &lt;p&gt;For our second GGJ together we decided to focus on a smaller game, which allowed us to actually complete it this year! For the theme: Ritual, we created a game where you are in charge of collecting holy water for your village each day. To complete the ritual, you must pray to different gods each day to grant access to the river water. You can read more about it 
 &lt;a href=&quot;/games/ritual-river&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;Ideas are flowing&quot; src=&quot;/assets/images/blog/ggj2016/start.jpg&quot; class=&quot;pure-img&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;Ideas are flowing&quot; src=&quot;/assets/images/blog/ggj2016/start.jpg&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;Ritual River Spritesheet&quot; src=&quot;/assets/images/blog/ggj2016/title.png&quot; class=&quot;pure-img&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;Ritual River Spritesheet&quot; src=&quot;/assets/images/blog/ggj2016/title.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This year’s jam was again hosted at Volta, this time at their new location (which was awesome!). A huge thank you to everyone involved setting it up, as it was a great place to jam and meet new people.&lt;/p&gt;
 
@@ -257,7 +407,7 @@ Our workflow usually goes as follows:&lt;/p&gt;
 
 &lt;p&gt;Overall I learned a lot this weekend and remembered why I love programming in Unity in the first place. I look forward to finishing school and having more time to work on more projects and game jams!&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;Ritual River Spritesheet&quot; src=&quot;/assets/images/blog/ggj2016/game.png&quot; class=&quot;pure-img&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;Ritual River Spritesheet&quot; src=&quot;/assets/images/blog/ggj2016/game.png&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;sarah&quot;&gt;Sarah&lt;/h2&gt;
 
@@ -275,16 +425,14 @@ Our workflow usually goes as follows:&lt;/p&gt;
 
 &lt;p&gt;Shown below is the sprite sheet I made as the hero in our game Ritual River. Seeing as we only had 48 hours to fully complete our project, we decided it was a good idea to keep it simple. It turns out all you need to have a functioning walking animation is 20 sprites; many of which are copies. The 4  left most sprites are the idle sprites, and each other row is a direction of the walking animation. Notice how when his leg is behind the other I’ve made it slightly darker to help create the illusion of walking.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;Ritual River Spritesheet&quot; src=&quot;/assets/images/blog/ggj2016/sprite.png&quot; class=&quot;pure-img&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;Ritual River Spritesheet&quot; src=&quot;/assets/images/blog/ggj2016/sprite.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I’m looking forward to our future projects so I can learn more about the basics of sprite design and making image assets for games!&lt;/p&gt;
 </description>
-        <pubDate>Sat, 05 Mar 2016 16:31:34 -0400</pubDate>
+        <pubDate>Sat, 05 Mar 2016 00:00:00 -0400</pubDate>
         <link>http://www.sacredseedstudio.com/blog/2016/03/05/global-game-jam-2016-post-mortem</link>
         <guid isPermaLink="true">http://www.sacredseedstudio.com/blog/2016/03/05/global-game-jam-2016-post-mortem</guid>
         
-        
-        <category>development</category>
         
         <category>gamejam</category>
         
