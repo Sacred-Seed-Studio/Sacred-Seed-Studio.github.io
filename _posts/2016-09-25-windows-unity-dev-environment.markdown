@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Setting up a Unity dev environment on Windows"
-date:   2016-09-24
+date:   2016-09-25
 categories: tutorial unity git
 class: blog
 author: "Joel Kuntz"
