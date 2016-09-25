@@ -5,13 +5,13 @@
     <description></description>
     <link>http://www.sacredseedstudio.com/</link>
     <atom:link href="http://www.sacredseedstudio.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 25 Sep 2016 16:56:15 -0300</pubDate>
-    <lastBuildDate>Sun, 25 Sep 2016 16:56:15 -0300</lastBuildDate>
+    <pubDate>Sun, 25 Sep 2016 17:06:09 -0300</pubDate>
+    <lastBuildDate>Sun, 25 Sep 2016 17:06:09 -0300</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
         <title>Setting up a Unity dev environment on Windows</title>
-        <description>&lt;p&gt;Whether you are just starting with Unity, reinstalling your operating system, or helping a friend; we all have to setup development environements. I frequently do this and there are several essential things needed for a well rounded environement. I hope to share my insights so that you can create your own environment and start making games in Unity right now.
+        <description>&lt;p&gt;Whether you are just starting with Unity, reinstalling your operating system, or helping a friend; we all have to setup development environments. I frequently do this and there are several essential things needed for a well rounded environment. I hope to share my insights so that you can create your own environment and start making games in Unity right now.
 Programs to install:&lt;/p&gt;
 
 &lt;ul&gt;
@@ -158,6 +158,8 @@ git push origin master &lt;span class=&quot;c&quot;&gt;# If you are setup to a r
         <category>unity</category>
         
         <category>git</category>
+        
+        <category>windows</category>
         
       </item>
     
