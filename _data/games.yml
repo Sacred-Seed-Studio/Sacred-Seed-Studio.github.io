@@ -1,9 +1,9 @@
-- name: Minigolf
-  date: 2016-08-01
-  url:
-  screenshot:
-  type: Experiments
-  type_class: experiment
+- name: Eternigolf
+  date: 2016-09-26
+  url: http://www.sacredseedstudio.com/Eternigolf/
+  screenshot: /assets/images/games/eternigolf/title.png
+  type: Release
+  type_class: release
 
 - name: Farmer
   date: 2015-06-01
