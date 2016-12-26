@@ -8,7 +8,7 @@ class: blog
 To introduce us and finally launch our website we decided what better way then to do a postmortem of Global Game Jam 2016!
 
 For our second GGJ together we decided to focus on a smaller game, which allowed us to actually complete it this year! For the theme: Ritual, we created a game where you are in charge of collecting holy water for your village each day. To complete the ritual, you must pray to different gods each day to grant access to the river water. You can read more about it 
-[here]({{site.base-url}}/games/ritual-river).
+[here]({{site.base-url}}/games/global-game-jam/).
 
 <img alt="Ideas are flowing" src="{{site.base-url}}/assets/images/blog/ggj2016/start.jpg">
 

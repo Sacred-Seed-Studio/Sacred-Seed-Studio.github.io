@@ -5,7 +5,6 @@ group :jekyll_plugins do
   gem "rouge"
   gem "rake"
   gem "jekyll"
-  gem "jekyll-gist"
   gem "jekyll-paginate"
   gem "jekyll-minifier"
   gem "html-proofer"

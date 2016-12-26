@@ -3,3 +3,4 @@ _site
 tmp/
 target/
 *.lock
+.rake_task*
