@@ -5,8 +5,8 @@
     <description></description>
     <link>https://www.sacredseedstudio.com/</link>
     <atom:link href="https://www.sacredseedstudio.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 25 Dec 2016 21:47:31 -0400</pubDate>
-    <lastBuildDate>Sun, 25 Dec 2016 21:47:31 -0400</lastBuildDate>
+    <pubDate>Mon, 26 Dec 2016 02:57:35 +0000</pubDate>
+    <lastBuildDate>Mon, 26 Dec 2016 02:57:35 +0000</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
     
       <item>
@@ -106,7 +106,7 @@ The SetParam function is setting the query string of the current URL, which appe
 
 &lt;p&gt;Hopefully this has helped you and we can’t wait to see what you come up with.&lt;/p&gt;
 </description>
-        <pubDate>Thu, 03 Nov 2016 00:00:00 -0300</pubDate>
+        <pubDate>Thu, 03 Nov 2016 00:00:00 +0000</pubDate>
         <link>https://www.sacredseedstudio.com/blog/2016/11/03/query-strings-with-unity-webgl</link>
         <guid isPermaLink="true">https://www.sacredseedstudio.com/blog/2016/11/03/query-strings-with-unity-webgl</guid>
         
@@ -258,7 +258,7 @@ git push origin master &lt;span class=&quot;c&quot;&gt;# If you are setup to a r
 
 &lt;p&gt;Good luck explorers!&lt;/p&gt;
 </description>
-        <pubDate>Sun, 25 Sep 2016 00:00:00 -0300</pubDate>
+        <pubDate>Sun, 25 Sep 2016 00:00:00 +0000</pubDate>
         <link>https://www.sacredseedstudio.com/blog/2016/09/25/windows-unity-dev-environment</link>
         <guid isPermaLink="true">https://www.sacredseedstudio.com/blog/2016/09/25/windows-unity-dev-environment</guid>
         
@@ -477,7 +477,7 @@ git push origin master &lt;span class=&quot;c&quot;&gt;# If you are setup to a r
   &lt;li&gt;&lt;a href=&quot;http://www.tallior.com/pimp-my-debug-log/&quot;&gt;Pimp my Debug.Log&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Sun, 05 Jun 2016 00:00:00 -0300</pubDate>
+        <pubDate>Sun, 05 Jun 2016 00:00:00 +0000</pubDate>
         <link>https://www.sacredseedstudio.com/blog/2016/06/05/Output-the-Unity-console-to-file</link>
         <guid isPermaLink="true">https://www.sacredseedstudio.com/blog/2016/06/05/Output-the-Unity-console-to-file</guid>
         
@@ -495,7 +495,7 @@ git push origin master &lt;span class=&quot;c&quot;&gt;# If you are setup to a r
         <description>&lt;p&gt;To introduce us and finally launch our website we decided what better way then to do a postmortem of Global Game Jam 2016!&lt;/p&gt;
 
 &lt;p&gt;For our second GGJ together we decided to focus on a smaller game, which allowed us to actually complete it this year! For the theme: Ritual, we created a game where you are in charge of collecting holy water for your village each day. To complete the ritual, you must pray to different gods each day to grant access to the river water. You can read more about it 
-&lt;a href=&quot;/games/ritual-river&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&quot;/games/global-game-jam/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img alt=&quot;Ideas are flowing&quot; src=&quot;/assets/images/blog/ggj2016/start.jpg&quot; /&gt;&lt;/p&gt;
 
@@ -541,7 +541,7 @@ Our workflow usually goes as follows:&lt;/p&gt;
 
 &lt;p&gt;I’m looking forward to our future projects so I can learn more about the basics of sprite design and making image assets for games!&lt;/p&gt;
 </description>
-        <pubDate>Sat, 05 Mar 2016 00:00:00 -0400</pubDate>
+        <pubDate>Sat, 05 Mar 2016 00:00:00 +0000</pubDate>
         <link>https://www.sacredseedstudio.com/blog/2016/03/05/global-game-jam-2016-post-mortem</link>
         <guid isPermaLink="true">https://www.sacredseedstudio.com/blog/2016/03/05/global-game-jam-2016-post-mortem</guid>
         
