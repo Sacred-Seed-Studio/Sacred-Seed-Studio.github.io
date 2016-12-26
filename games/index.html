@@ -29,7 +29,7 @@ class: games
 <div class="flex-container">
 {% assign games = site.data.games | sort: 'date' %}
 
-{% for game in games reversed | sort: 'date' %}
+{% for game in games reversed %}
     <article class="flex-item {{game.type_class}} {{game.name}}">
         {% if game.url %}
             <a class="game" href="{{ game.url | prepend: site.baseurl }}" title="{{ game.name }}">
