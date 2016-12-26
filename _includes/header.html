@@ -1,5 +1,5 @@
 <header>
-    <a href="/"><img src="http://www.sacredseedstudio.com/assets/images/logo-large.png" alt="Sacred Seed Studio Logo"></a>
+    <a href="/"><img src="{{"/assets/images/logo-large.png" | prepend: site.baseurl}}" alt="Sacred Seed Studio Logo"></a>
     <ul>
         {% for link in site.navigation %}
             {% assign current = nil %}
