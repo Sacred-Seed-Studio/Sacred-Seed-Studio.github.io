@@ -1,0 +1,12 @@
+test:
+    override:
+        - bundle exec rake test
+test:
+  override:
+    - bundle exec rake test
+
+deployment:
+  production:
+    branch: develop
+    commands:
+      - ./deploy.sh

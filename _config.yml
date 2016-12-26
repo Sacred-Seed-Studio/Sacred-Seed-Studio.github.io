@@ -2,10 +2,10 @@
 title: Sacred Seed Studio
 description: > # A indie game development studio location in Canada, eh.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://www.sacredseedstudio.com" # the base hostname & protocol for your site
+url: "https://www.sacredseedstudio.com" # the base hostname & protocol for your site
 
 # Contact info
-twitter_username: sacredseedstudio
+twitter_username: sacredseedstdio
 github_username:  sacredseedstudio
 email: sacredseedstudio@gmail.com
 
@@ -13,12 +13,6 @@ email: sacredseedstudio@gmail.com
 permalink: /blog/:year/:month/:day/:title
 paginate: 6
 paginate_path: "/blog/page/:num"
-
-# Tutorial settings
-# collections:
-#   tutorials:
-#     output: true
-#     permalink: "/tutorials/:path"
 
 # Navigation
 navigation:
