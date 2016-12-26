@@ -3,11 +3,11 @@
   <channel>
     <title>Sacred Seed Studio</title>
     <description></description>
-    <link>http://www.sacredseedstudio.com/</link>
-    <atom:link href="http://www.sacredseedstudio.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 03 Nov 2016 00:31:33 -0300</pubDate>
-    <lastBuildDate>Thu, 03 Nov 2016 00:31:33 -0300</lastBuildDate>
-    <generator>Jekyll v3.2.1</generator>
+    <link>https://www.sacredseedstudio.com/</link>
+    <atom:link href="https://www.sacredseedstudio.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 25 Dec 2016 21:47:31 -0400</pubDate>
+    <lastBuildDate>Sun, 25 Dec 2016 21:47:31 -0400</lastBuildDate>
+    <generator>Jekyll v3.3.1</generator>
     
       <item>
         <title>Query Strings (Parameters) with Unity WebGL</title>
@@ -107,8 +107,8 @@ The SetParam function is setting the query string of the current URL, which appe
 &lt;p&gt;Hopefully this has helped you and we can’t wait to see what you come up with.&lt;/p&gt;
 </description>
         <pubDate>Thu, 03 Nov 2016 00:00:00 -0300</pubDate>
-        <link>http://www.sacredseedstudio.com/blog/2016/11/03/query-strings-with-unity-webgl</link>
-        <guid isPermaLink="true">http://www.sacredseedstudio.com/blog/2016/11/03/query-strings-with-unity-webgl</guid>
+        <link>https://www.sacredseedstudio.com/blog/2016/11/03/query-strings-with-unity-webgl</link>
+        <guid isPermaLink="true">https://www.sacredseedstudio.com/blog/2016/11/03/query-strings-with-unity-webgl</guid>
         
         
         <category>tutorial</category>
@@ -259,8 +259,8 @@ git push origin master &lt;span class=&quot;c&quot;&gt;# If you are setup to a r
 &lt;p&gt;Good luck explorers!&lt;/p&gt;
 </description>
         <pubDate>Sun, 25 Sep 2016 00:00:00 -0300</pubDate>
-        <link>http://www.sacredseedstudio.com/blog/2016/09/25/windows-unity-dev-environment</link>
-        <guid isPermaLink="true">http://www.sacredseedstudio.com/blog/2016/09/25/windows-unity-dev-environment</guid>
+        <link>https://www.sacredseedstudio.com/blog/2016/09/25/windows-unity-dev-environment</link>
+        <guid isPermaLink="true">https://www.sacredseedstudio.com/blog/2016/09/25/windows-unity-dev-environment</guid>
         
         
         <category>tutorial</category>
@@ -478,8 +478,8 @@ git push origin master &lt;span class=&quot;c&quot;&gt;# If you are setup to a r
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 05 Jun 2016 00:00:00 -0300</pubDate>
-        <link>http://www.sacredseedstudio.com/blog/2016/06/05/Output-the-Unity-console-to-file</link>
-        <guid isPermaLink="true">http://www.sacredseedstudio.com/blog/2016/06/05/Output-the-Unity-console-to-file</guid>
+        <link>https://www.sacredseedstudio.com/blog/2016/06/05/Output-the-Unity-console-to-file</link>
+        <guid isPermaLink="true">https://www.sacredseedstudio.com/blog/2016/06/05/Output-the-Unity-console-to-file</guid>
         
         
         <category>unity</category>
@@ -542,8 +542,8 @@ Our workflow usually goes as follows:&lt;/p&gt;
 &lt;p&gt;I’m looking forward to our future projects so I can learn more about the basics of sprite design and making image assets for games!&lt;/p&gt;
 </description>
         <pubDate>Sat, 05 Mar 2016 00:00:00 -0400</pubDate>
-        <link>http://www.sacredseedstudio.com/blog/2016/03/05/global-game-jam-2016-post-mortem</link>
-        <guid isPermaLink="true">http://www.sacredseedstudio.com/blog/2016/03/05/global-game-jam-2016-post-mortem</guid>
+        <link>https://www.sacredseedstudio.com/blog/2016/03/05/global-game-jam-2016-post-mortem</link>
+        <guid isPermaLink="true">https://www.sacredseedstudio.com/blog/2016/03/05/global-game-jam-2016-post-mortem</guid>
         
         
         <category>gamejam</category>
