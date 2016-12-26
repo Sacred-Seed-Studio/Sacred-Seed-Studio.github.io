@@ -33,4 +33,11 @@ git add -A
 git commit -m "Deploy $commit"
 git push origin master
 
+# Clear cache on cloudflare
+curl -X DELETE "https://api.cloudflare.com/client/v4/zones/$CLOUDFLARE_ZONE/purge_cache" \
+     -H "X-Auth-Email: $CLOUDFLARE_EMAIL" \
+     -H "X-Auth-Key: $CLOUDFLARE_KEY" \
+     -H "Content-Type: application/json" \
+     --data '{"purge_everything":true}'
+
 echo "Finished Deployment!"
