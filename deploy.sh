@@ -24,9 +24,8 @@ find . -not -name 'CNAME' \
        -not -path './.git*' \
        -delete
 mv _site/* .
-rm -rf circle.yml \
+rm -rf deploy.sh \
        Rakefile* \
-       deploy.sh \
        Gemfile*
 
 # Commit it
