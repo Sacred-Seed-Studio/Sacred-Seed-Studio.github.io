@@ -94,6 +94,23 @@ main {
         .filters {
             display: block;
             text-align: center;
+            margin-bottom: 15px;
+
+            button {
+                display: inline-block;
+                padding: 5px 10px;
+                min-width: 3rem;
+                color: #222;
+                text-decoration: none;
+                border-radius: 0.25rem;
+                margin: 0.1rem;
+                border: 1px solid rgba(0,0,0,0.35);
+                cursor: pointer;
+
+                &.active {
+                    background: #81C784;
+                }
+            }
         }
 
         #gameTextFilter {
@@ -111,12 +128,12 @@ main {
             }
         }
 
-        article.flex-item {
+        article.grid-item {
             padding: 0;
             background: none;
             border: none;
-            position: relative;
-            flex-grow: 0;
+            width: 100%;
+            margin-bottom: 10px;
 
             a {
                 position: relative;
@@ -432,12 +449,10 @@ path { transition: fill .4s ease; }
         -webkit-flex: 1 0 40%;
         flex: 1 0 40%;
     }
+    main.games article.grid-item { width: 50%; }
 }
 
 @media (min-width: 900px) {
-    html {
-        font-size: 1.2rem;
-    }
     body > header img {
         max-width: 35%;
     }
@@ -448,15 +463,20 @@ path { transition: fill .4s ease; }
         -webkit-flex: 1 0 30%;
         flex: 1 0 30%;
     }
+    main.games article.grid-item { width: 33.3%; }
 }
 
 @media (min-width: 1200px){
+    html {
+        font-size: 1.2rem;
+    }
     body > header img {
         max-width: 25%;
     }
     main {
         padding: 100px 75px 125px
     }
+    main.games article.grid-item { width: 25%; }
 }
 
 @media (min-width: 1400px){
