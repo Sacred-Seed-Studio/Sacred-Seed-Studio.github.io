@@ -4,99 +4,115 @@ nav_layout: game
 title: Games
 class: games
 ---
-<input type="search" placeholder="Search" id="gameTextFilter">
 <div class="filters">
-    <label>
-        <input type="checkbox" id="fullgamecheck" checked="checked">
-        Full Game
-    </label>
-
-    <label>
-        <input type="checkbox" id="hackathoncheck" checked="checked">
-        Hackathon
-    </label>
-    <br>
-    <label>
-        <input type="checkbox" id="gamejamcheck" checked="checked">
-        Game Jam
-    </label>
-    <label>
-        <input type="checkbox" id="experimentcheck" checked="checked">
-        Experiment
-    </label>
+    <button class="active" onclick="toggleAllFilters()">All</button>
+    <button id="btn-release" class="active" onclick="toggleFilter('.release')">Full Game</button>
+    <button id="btn-gamejam" class="active" onclick="toggleFilter('.gamejam')">Game Jam</button>
+    <button id="btn-hackathon" class="active" onclick="toggleFilter('.hackathon')">Hackathon</button>
+    <button id="btn-experiment" class="active" onclick="toggleFilter('.experiment')">Experiment</button>
 </div>
 
-<div class="flex-container">
-{% assign games = site.data.games | sort: 'date' %}
-
-{% for game in games reversed %}
-    <article class="flex-item {{game.type_class}} {{game.name}}">
-        {% if game.url %}
-            <a class="game" href="{{ game.url | prepend: site.baseurl }}" title="{{ game.name }}">
-        {% else %}
-            <a class="game" title="{{ game.name }}">
-        {% endif %}
-            <div class="img-holder">
-                {% if game.screenshot %}
-                    <img src="{{ game.screenshot | prepend: site.baseurl }}" alt="{{game.name}}">
-                {% else %}
-                    <p class="no-img">{{game.name}}</p>
-                {% endif %}
-            </div>
-            <h2 class="ribbon">
-            {{game.name}} &#9679;
-            {{game.date | date: '%B %Y'}}
-            {% if game.type %}
-                &#9679;
-                {{game.type}}
+<div class="grid">
+    {% assign games = site.data.games | sort: 'date' %}
+    {% for game in games reversed %}
+        <article class="grid-item {{game.type_class}} {{game.name}}">
+            {% if game.url %}
+                <a class="game" href="{{ game.url | prepend: site.baseurl }}" title="{{ game.name }}">
+            {% else %}
+                <a class="game" title="{{ game.name }}">
             {% endif %}
-            </h2>
-        </a>
-    </article>
-{% endfor %}
+                <div class="img-holder">
+                    {% if game.screenshot %}
+                        <img src="{{ game.screenshot | prepend: site.baseurl }}" alt="{{game.name}}">
+                    {% else %}
+                        <p class="no-img">{{game.name}}</p>
+                    {% endif %}
+                </div>
+                <h2 class="ribbon">
+                {{game.name}} &#9679;
+                {{game.date | date: '%b %Y'}}
+                {% if game.type %}
+                    &#9679;
+                    {{game.type}}
+                {% endif %}
+                </h2>
+            </a>
+        </article>
+    {% endfor %}
 </div>
+
+<script src="{{ "/js/isotope.min.js" | prepend: site.baseurl }}" type="text/javascript"></script>
 
 <script>
-    var search = document.getElementById('gameTextFilter');
-    var cbFullGame = document.getElementById('fullgamecheck');
-    var cbHackathon = document.getElementById('hackathoncheck');
-    var cbGameJam = document.getElementById('gamejamcheck');
-    var cbExperiment = document.getElementById('experimentcheck');
+    // init Isotope
+    var iso = new Isotope('.grid', {
+      itemSelector: '.grid-item',
+      layoutMode: 'fitRows',
+      stagger: 30
+    });
+
+    var filters = {
+        ".release": true,
+        ".gamejam": true,
+        ".hackathon": true,
+        ".experiment": true
+    };
+
+    var buttons = {
+        ".release": document.getElementById("btn-release"),
+        ".gamejam": document.getElementById("btn-gamejam"),
+        ".hackathon": document.getElementById("btn-hackathon"),
+        ".experiment": document.getElementById("btn-experiment")
+    };
+
+    function getFilterString(){
+        var ret = "";
+        var keys = Object.keys(filters);
+
+        if (keys.every(function(key){return filters[key];})){
+            ret = "*";
+        }
+        else {
+            keys.forEach(function(key){
+                if (filters[key]){
+                    ret += (ret.length === 0) ? key : ", " + key;
+                }
+            });
+        }
+        return ret || ".shownothing";
+    }
+
+    function toggleAllFilters(){
+        var keys = Object.keys(filters);
+        var isOn = true;
+        if (keys.every(function(key){return filters[key];})){
+            isOn = false;
+        }
+        Object.keys(filters).forEach(function(key){
+            filters[key] = isOn;
+        });
+        updateFilter();
+    }
+
+    function toggleFilter(key){
+        filters[key] = !filters[key];
+        updateFilter();
+    }
 
     function updateFilter(){
-        var checked = [];
-        if (cbFullGame.checked) { checked.push('release'); }
-        if (cbHackathon.checked) { checked.push('hackathon'); }
-        if (cbGameJam.checked) { checked.push('gamejam'); }
-        if (cbExperiment.checked) { checked.push('experiment'); }
+        iso.arrange({ filter: getFilterString() });
+        setActiveButtons();
+    }
 
-        document.querySelectorAll('.flex-item').forEach(function(n){
-            var found = false,
-                checkFound = false,
-                classes = [];
-
-            n.classList.forEach(function(n){ if(n!= "flex-item"){ classes.push(n); } });
-            if (classes.some(function(n){
-                if (search.value){
-                    return search.value.split(" ").filter(function(m){return m!=="";}).some(function(m){
-                        return n.toLowerCase().indexOf(m.toLowerCase()) > -1;
-                    });
-                }
-                else { return true; }
-            })) {
-                found = true;
+    function setActiveButtons(){
+        Object.keys(filters).forEach(function(key){
+            if (filters[key]){
+                buttons[key].classList.add('active');
             }
-
-            checked.forEach(function(m){ if (n.classList.contains(m)){ checkFound = true; } });
-
-            if (found && checkFound) { n.classList.remove("hidden"); }
-            else { n.classList.add("hidden"); }
+            else {
+                buttons[key].classList.remove('active');
+            }
         });
     }
 
-    search.addEventListener('input', updateFilter);
-    cbFullGame.addEventListener('change', updateFilter);
-    cbHackathon.addEventListener('change', updateFilter);
-    cbGameJam.addEventListener('change', updateFilter);
-    cbExperiment.addEventListener('change', updateFilter);
 </script>
