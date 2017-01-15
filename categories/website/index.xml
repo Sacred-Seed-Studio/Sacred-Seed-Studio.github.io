@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Website on Sacred Seed Studio</title>
+    <link>https://www.sacredseedstudio.com/categories/website/index.xml</link>
+    <description>Recent content in Website on Sacred Seed Studio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.sacredseedstudio.com/categories/website/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Relaunching the Website</title>
+      <link>https://www.sacredseedstudio.com/blog/2017/01/15/relaunching-the-website</link>
+      <pubDate>Sun, 15 Jan 2017 12:28:58 -0400</pubDate>
+      
+      <guid>https://www.sacredseedstudio.com/blog/2017/01/15/relaunching-the-website</guid>
+      <description>&lt;p&gt;Over the past ~month the website has seen some enhancements, but today the biggest of all. We switched from &lt;a href=&#34;http://jekyllrb.com/&#34;&gt;Jekyll&lt;/a&gt; to &lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; as our static site generator.&lt;/p&gt;
+
+&lt;p&gt;While Jekyll may be more mature it turned out to be difficult to tune it to exactly how we wanted. Our Tutorials are now separate from our blog. This was a big struggle point with Jekyll and it seems Hugo was built with that in mind. Some other improvements: We added a gallery, improved our games page, created a new logo, and added https support. The site is much easier to maintain now with continuous deployment from CircleCI. This went quite well and makes the website ready for an awesome 2017! We definitely recommend Hugo and the switch from Jekyll wasn&amp;rsquo;t too bad.&lt;/p&gt;
+
+&lt;p&gt;If you are interested in how this website was built, please checkout it&amp;rsquo;s &lt;a href=&#34;https://github.com/Sacred-Seed-Studio/Sacred-Seed-Studio.github.io&#34;&gt;repository here&lt;/a&gt;. I have tagged the final state of the Jekyll site and the initial working state of the hugo site under the &lt;a href=&#34;https://github.com/Sacred-Seed-Studio/Sacred-Seed-Studio.github.io/releases&#34;&gt;Releases page&lt;/a&gt;. If you have any questions feel free to let us know!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
