@@ -21,6 +21,8 @@ git config --global user.name "$GH_NAME" > /dev/null 2>&1
 git checkout master
 find . -not -path './public*' \
        -not -path './.git*' \
+       -not -path './README*' \
+       -not -path './LICENSE*' \
        -delete
 mv public/* .
 rm -rf deploy.sh \
