@@ -1,0 +1,11 @@
+{{ partial "header.html" . }}
+
+    {{ range .Data.Pages }}
+        {{ .Content }}
+    {{ end }}
+
+    <div class="pagination">
+        <p><a href="http://giphy.com/channel/sacredseedstudio">See the full gallery on our Giphy channel</a></p>
+    </div>
+
+{{ partial "footer.html" . }}

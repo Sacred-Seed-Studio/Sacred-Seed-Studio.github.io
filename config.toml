@@ -1,0 +1,18 @@
+baseURL = "https://www.sacredseedstudio.com/"
+
+languageCode = "en-us"
+title = "Sacred Seed Studio"
+
+pygmentsuseclasses = true
+PygmentsCodeFences = true
+
+SectionPagesMenu = "main"
+
+Paginate = 6
+
+[params]
+  twitter = "sacredseedstdio"
+  repository = "https://github.com/Sacred-Seed-Studio/Sacred-Seed-Studio.github.io"
+
+[permalinks]
+  blog = "/blog/:year/:month/:day/:title"

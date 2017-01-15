@@ -1,0 +1,17 @@
+{{ partial "header.html" . }}
+
+    <header>
+        <h1>{{ humanize .Data.Plural }}</h1>
+    </header>
+
+    <article>
+        <h4>Category <small>(Article count)</small></h4>
+        <ul>
+            {{ $data := .Data }}
+            {{ range $key,$value := .Data.Terms.ByCount }}
+                <li><a href="/{{ $data.Plural }}/{{ $value.Name | urlize }}"> {{ $value.Name }} </a> <small>({{ $value.Count }})</small></li>
+            {{ end }}
+        </ul>
+    </article>
+
+{{ partial "footer.html" . }}

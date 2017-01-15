@@ -1,0 +1,19 @@
+{{ partial "header.html" . }}
+
+    <header>
+        <h1>{{ .Title }}</h1>
+
+        {{ if .Params.subtitle }}
+            <h2>{{ .Params.subtitle }}</h2>
+        {{ end }}
+
+        <h3>{{ .Date.Format "Jan 2, 2006" }}</h3>
+    </header>
+
+    <article>
+        {{ .Content }}
+    </article>
+
+    {{ partial "share.html" . }}
+
+{{ partial "footer.html" . }}

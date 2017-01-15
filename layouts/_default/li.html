@@ -1,0 +1,26 @@
+<article>
+    <header>
+        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <p>
+            {{ .Date.Format "Jan 2, 2006" }}
+
+            {{ if .Params.author }}
+             • <span class="post-author">{{ .Params.author }}</span>
+            {{ end }}
+
+             • Read in {{ .ReadingTime }}m
+        </p>
+
+        {{ if .Params.categories }}
+            <ul class="no-pad">
+                {{ range .Params.categories }}
+                    <li><a href="/categories/{{ . }}">{{ . }}</a></li>
+                {{ end }}
+            </ul>
+        {{ end }}
+    </header>
+    <div class="post-description">
+        {{ .Summary }}
+        <a href="{{ .Permalink }}" class="continue">Continue reading...</a>
+    </div>
+</article>

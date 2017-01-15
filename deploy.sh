@@ -19,14 +19,11 @@ git config --global user.name "$GH_NAME" > /dev/null 2>&1
 # Our test already built it, now we switch to master,
 # replace with newest build, and clean it up
 git checkout master
-find . -not -name 'CNAME' \
-       -not -path './_site*' \
+find . -not -path './public*' \
        -not -path './.git*' \
        -delete
-mv _site/* .
+mv public/* .
 rm -rf deploy.sh \
-       Rakefile* \
-       Gemfile*
 
 # Commit it
 git add -A

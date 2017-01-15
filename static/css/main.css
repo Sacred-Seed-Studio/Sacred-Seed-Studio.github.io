@@ -1,0 +1,542 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: #ECE9E6;
+  /* fallback for old browsers */
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.75rem;
+}
+
+body > header {
+  width: 100%;
+  background: #000;
+}
+body > header .title-wrap {
+  display: block;
+  margin: 0 auto;
+}
+body > header .title-wrap img {
+  display: block;
+  margin: 0 auto;
+}
+body > header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+body > header ul li {
+  display: inline;
+  margin: 0 0.1rem;
+  position: relative;
+  top: 1.75rem;
+  height: 1rem;
+}
+body > header ul li a {
+  display: inline-block;
+  padding: 10px;
+  min-width: 5rem;
+  background: #81C784;
+  color: #222;
+  text-decoration: none;
+  border: 6px solid #ECE9E6;
+  width: 47.5%;
+}
+body > header ul li a:hover {
+  background: #3F7C3D;
+  color: white;
+}
+body > header ul li.gallery a {
+  background: #64B5F6;
+}
+body > header ul li.gallery a:hover {
+  background: #2A63A7;
+}
+body > header ul li.games a {
+  background: #BA68C8;
+}
+body > header ul li.games a:hover {
+  background: #763081;
+}
+body > header ul li.tutorials a {
+  background: #DF7073;
+}
+body > header ul li.tutorials a:hover {
+  background: #911E24;
+}
+
+main {
+  /*margin-top: 75px;*/
+  margin: 0px;
+  border-top: 10px solid #000;
+  padding: 50px 8px 75px;
+}
+main.games {
+  border-top: 10px solid #BA68C8;
+}
+main.games .filters {
+  display: block;
+  text-align: center;
+  margin-bottom: 15px;
+}
+main.games .filters button {
+  display: inline-block;
+  padding: 5px 10px;
+  min-width: 3rem;
+  color: #222;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  margin: 0.1rem;
+  border: 1px solid rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+}
+main.games .filters button.active {
+  background: #BA68C8;
+}
+main.games #gameTextFilter {
+  width: 50%;
+  margin: 0 auto;
+  display: block;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid grey;
+  text-align: center;
+}
+main.games #gameTextFilter:focus {
+  outline: none;
+  border-bottom: 1px solid black;
+}
+main.games article.grid-item {
+  padding: 0;
+  background: none;
+  border: none;
+  width: 100%;
+  margin-bottom: 10px;
+}
+main.games article.grid-item a {
+  position: relative;
+}
+main.games article.grid-item a .img-holder {
+  background: #232526;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #232526, #414345);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #232526, #414345);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: white;
+}
+main.games article.grid-item a .img-holder img {
+  width: 100%;
+  max-height: 100px;
+  min-height: 100px;
+  object-fit: cover;
+}
+main.games article.grid-item a .img-holder .no-img {
+  line-height: 100px;
+  text-align: center;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+main.games article.grid-item .ribbon {
+  text-align: center;
+  display: block;
+  width: 100%;
+  background: #BA68C8;
+  color: white;
+  font-size: 50%;
+  margin: 0;
+  font-weight: initial;
+}
+main.blog,
+main.blogs {
+  border-top: 10px solid #81C784;
+}
+main.blog article ul,
+main.blogs article ul {
+  padding-left: 45px;
+}
+main.tutorials {
+  border-top: 10px solid #DF7073;
+}
+main.galleries {
+  border-top: 10px solid #64B5F6;
+  text-align: center;
+}
+main.categories ul {
+  list-style: none;
+}
+main.categories ul li {
+  margin: 0;
+}
+main.categories h6 {
+  line-height: 1rem;
+  margin: 0.75rem 0;
+}
+main .share {
+  text-align: center;
+}
+main .share h4 {
+  margin-bottom: 0;
+}
+main .share a .google,
+main .share a .reddit {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background-color: #DC4E41;
+}
+main .share a .google svg,
+main .share a .reddit svg {
+  width: 24px;
+}
+main .share a .reddit {
+  background-color: #EF7E00;
+}
+main .share a svg {
+  width: 48px;
+  height: 48px;
+}
+main section {
+  margin-top: 4rem;
+}
+main > header {
+  text-align: center;
+}
+main > header h1 {
+  margin: 0.2rem 0;
+  line-height: 2.1rem;
+  font-weight: 300;
+}
+main > header h3 {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #7C979F;
+  line-height: 2rem;
+}
+main > header h5 {
+  font-size: 1rem;
+  margin: 0 0 0 0;
+  color: #7C979F;
+  line-height: 1.2rem;
+}
+main header p {
+  margin: 0;
+}
+main header h2 a {
+  color: inherit;
+}
+main header ul {
+  padding: 0;
+  margin: 0.25rem 0 1rem 0;
+  list-style: none;
+  line-height: 1rem;
+}
+main header ul li {
+  font-size: 1rem;
+  display: inline-block;
+}
+main header ul li:after {
+  content: ",";
+}
+main header ul li:last-child:after {
+  content: "";
+}
+main article {
+  padding: 1rem 1rem 0.5rem 1rem;
+  background-color: #FFFFFF;
+  margin-bottom: 2.25rem;
+  border: 1px solid #ddd;
+  border-top: 5px solid #666;
+  box-shadow: 5px 10px 0px rgba(0, 0, 0, 0.01);
+}
+main article > h1,
+main article > h2,
+main article > h5,
+main article > h6 {
+  margin-top: 0;
+}
+main article > h3,
+main article > h4 {
+  margin-top: 1rem;
+}
+main article header h2 {
+  margin: 0;
+}
+main article header ul {
+  margin-top: 0;
+}
+main article .post-description p {
+  margin-bottom: 0.1rem;
+}
+main article.flex-item {
+  margin: 0.5rem;
+}
+
+#team {
+  text-align: center;
+}
+#team h1 {
+  text-align: initial;
+}
+#team h4 {
+  margin: 0.5rem 0;
+}
+#team img {
+  border-radius: 50%;
+  max-width: 256px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+#team svg {
+  width: 32px;
+  height: 32px;
+  fill: #333;
+}
+#team .flex-item {
+  margin-bottom: 2rem;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 24px;
+  width: 100%;
+  padding: 12px;
+  text-align: center;
+  background: #616161;
+  color: #f7f7f7;
+}
+footer a {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin: 0 10px;
+  background: #616161;
+  position: relative;
+  top: -28px;
+  border: 3px solid #616161;
+  border-radius: 50px;
+  padding: 2px;
+}
+footer a svg use {
+  fill: #FFFFFF;
+}
+
+.flex-container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.flex-item {
+  -webkit-flex: 1 0 100%;
+  flex: 1 0 100%;
+}
+
+path {
+  transition: fill .4s ease;
+}
+
+#svg-defs {
+  display: none;
+}
+
+.twitter:hover svg {
+  fill: #55ACEE !important;
+}
+
+.youtube:hover svg {
+  fill: #e52d27 !important;
+}
+
+.gplus:hover svg {
+  fill: #DC4E41 !important;
+}
+
+.github:hover svg {
+  fill: #4078c0 !important;
+}
+
+.top:hover svg {
+  fill: #ccc;
+}
+
+.pagination {
+  font-size: 1rem;
+  line-height: 1rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+.pagination p {
+  margin: 0;
+}
+.pagination a {
+  padding: 0 10px;
+}
+
+/*@media (max-width: 400px) {
+  body > header ul li a {
+    width: 49% !important;
+    height: 300px;
+  }
+}*/
+
+
+@media (min-width: 400px) {
+  footer {
+    height: 28px;
+  }
+  footer a {
+    width: 42px;
+    height: 42px;
+  }
+
+  body > header .title-wrap {
+    max-width: 75%;
+  }
+
+}
+@media (min-width: 425px) {
+  body > header ul li a {
+    width: 22% !important;
+    /*height: 300px;*/
+  }
+}
+@media (min-width: 600px) {
+  body > header ul li a {
+    width: 22% !important;
+    /*height: 300px;*/
+  }
+
+  body > header .title-wrap {
+    max-width: 50%;
+  }
+
+  main {
+    padding: 50px 25px 75px;
+  }
+
+  .flex-item {
+    -webkit-flex: 1 0 40%;
+    flex: 1 0 40%;
+  }
+
+  main.games article.grid-item {
+    width: 50%;
+  }
+}
+@media (min-width: 900px) {
+  body > header .title-wrap {
+    max-width: 35%;
+  }
+
+  main {
+    padding: 50px 50px 75px;
+  }
+
+  .flex-item {
+    -webkit-flex: 1 0 30%;
+    flex: 1 0 30%;
+  }
+
+  main.games article.grid-item {
+    width: 33.3%;
+  }
+}
+@media (min-width: 1200px) {
+  html {
+    font-size: 1.2rem;
+  }
+
+  body > header .title-wrap {
+    max-width: 25%;
+  }
+
+  main {
+    padding: 100px 75px 125px;
+  }
+
+  main.games article.grid-item {
+    width: 25%;
+  }
+}
+@media (min-width: 1400px) {
+  html {
+    font-size: 1.5rem;
+  }
+
+  footer a {
+    width: 48px;
+    height: 48px;
+    top: -32px;
+  }
+}
+@media (min-width: 1800px) {
+  main {
+    padding: 150px 75px 150px;
+  }
+  main .share {
+    text-align: center;
+  }
+  main .share h4 {
+    margin-bottom: 0;
+  }
+  main .share a .google,
+  main .share a .reddit {
+    width: 64px;
+    height: 64px;
+  }
+  main .share a .google svg,
+  main .share a .reddit svg {
+    width: 32px;
+  }
+  main .share a svg {
+    width: 64px;
+    height: 64px;
+  }
+
+  .flex-item {
+    -webkit-flex: 1 0 20%;
+    flex: 1 0 20%;
+  }
+}
+.hidden {
+  display: none;
+}
+
+.no-pad {
+  padding: 0 !important;
+}
+
+.note {
+  background: #FFF69A;
+  border-left: 4px solid #333;
+  padding: 10px;
+  display: inline-block;
+}
+
+.last-updated {
+  text-align: center;
+  font-size: 75%;
+}
+
+iframe {
+  max-width: 100%;
+}

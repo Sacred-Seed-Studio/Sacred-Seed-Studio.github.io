@@ -1,0 +1,35 @@
+{{ partial "header.html" . }}
+
+    <header>
+        <h1>{{ .Title }}</h1>
+        {{ if .Params.subtitle }}
+            <h2>{{ .Params.subtitle }}</h2>
+        {{ end }}
+        <h3>
+            {{ .Date.Format "Jan 2, 2006" }}
+
+            {{ if .Params.author }}
+             • {{ .Params.author }}
+            {{ end }}
+        </h3>
+        <h5>Read in {{ .ReadingTime }}m</h5>
+        {{ if .Params.categories }}
+            <ul>
+                {{ range .Params.categories }}
+                    <li><a href="/categories/{{ . }}">{{ . }}</a></li>
+                {{ end }}
+            </ul>
+        {{ end }}
+    </header>
+
+    <article>
+        {{ .Content }}
+    </article>
+
+    {{ partial "share.html" . }}
+
+    {{ if .Params.updated }}
+        <div class="last-updated">Last updated: {{ dateFormat "Jan 2, 2006" .Params.updated }}</div>
+    {{ end }}
+
+{{ partial "footer.html" . }}

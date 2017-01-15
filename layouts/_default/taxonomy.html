@@ -1,0 +1,9 @@
+{{ partial "header.html" . }}
+
+    <a href="/{{.Data.Plural}}">{{ .Data.Plural }}</a> / {{ lower .Title }}
+
+    {{ range .Data.Pages }}
+        {{ .Render "li"}}
+    {{ end }}
+
+{{ partial "footer.html" . }}

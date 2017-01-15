@@ -1,0 +1,115 @@
+{{ partial "header.html" . }}
+
+<div class="filters">
+    <button class="active" onclick="toggleAllFilters()">All</button>
+    <button id="btn-release" class="active" onclick="toggleFilter('.release')">Full Game</button>
+    <button id="btn-gamejam" class="active" onclick="toggleFilter('.gamejam')">Game Jam</button>
+    <button id="btn-hackathon" class="active" onclick="toggleFilter('.hackathon')">Hackathon</button>
+    <button id="btn-experiment" class="active" onclick="toggleFilter('.experiment')">Experiment</button>
+</div>
+
+<div class="grid">
+    {{ range .Data.Pages }}
+        <article class="grid-item {{ .Params.type_class }}">
+            {{ if .Params.no_link }}
+                <a class="game" title="{{ .Title }}">
+            {{ else }}
+                <a class="game" href="{{if .Params.direct_link }}{{ .Params.direct_link }}{{else}}{{ .Permalink }}{{end}}" title="{{ .Title }}">
+            {{ end }}
+                <div class="img-holder">
+                    {{ if .Params.image }}
+                        <img src="{{ .Site.BaseURL }}{{ .Params.image }}" alt="{{ .Title }}">
+                    {{ else }}
+                        <p class="no-img">{{ .Title }}</p>
+                    {{ end }}
+                </div>
+                <h2 class="ribbon">
+                {{ .Title }}
+                &#9679;
+                {{ .Date.Format "Jan 2006" }}
+                {{ if .Params.type }}
+                    &#9679;
+                    {{ .Params.type }}
+                {{ end }}
+                </h2>
+            </a>
+        </article>
+    {{ end }}
+</div>
+
+<script src="/js/isotope.min.js"></script>
+
+<script>
+    // init Isotope
+    var iso = new Isotope('.grid', {
+      itemSelector: '.grid-item',
+      layoutMode: 'fitRows',
+      stagger: 30
+    });
+
+    var filters = {
+        ".release": true,
+        ".gamejam": true,
+        ".hackathon": true,
+        ".experiment": true
+    };
+
+    var buttons = {
+        ".release": document.getElementById("btn-release"),
+        ".gamejam": document.getElementById("btn-gamejam"),
+        ".hackathon": document.getElementById("btn-hackathon"),
+        ".experiment": document.getElementById("btn-experiment")
+    };
+
+    function getFilterString(){
+        var ret = "";
+        var keys = Object.keys(filters);
+
+        if (keys.every(function(key){return filters[key];})){
+            ret = "*";
+        }
+        else {
+            keys.forEach(function(key){
+                if (filters[key]){
+                    ret += (ret.length === 0) ? key : ", " + key;
+                }
+            });
+        }
+        return ret || ".shownothing";
+    }
+
+    function toggleAllFilters(){
+        var keys = Object.keys(filters);
+        var isOn = true;
+        if (keys.every(function(key){return filters[key];})){
+            isOn = false;
+        }
+        Object.keys(filters).forEach(function(key){
+            filters[key] = isOn;
+        });
+        updateFilter();
+    }
+
+    function toggleFilter(key){
+        filters[key] = !filters[key];
+        updateFilter();
+    }
+
+    function updateFilter(){
+        iso.arrange({ filter: getFilterString() });
+        setActiveButtons();
+    }
+
+    function setActiveButtons(){
+        Object.keys(filters).forEach(function(key){
+            if (filters[key]){
+                buttons[key].classList.add('active');
+            }
+            else {
+                buttons[key].classList.remove('active');
+            }
+        });
+    }
+</script>
+
+{{ partial "footer.html" . }}

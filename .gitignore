@@ -1,6 +1,1 @@
-_site
-.sass-cache
-tmp/
-target/
-*.lock
-.rake_task*
+public/
