@@ -5,9 +5,9 @@ https://www.sacredseedstudio.com
 
 Proudly built with
 - Static site generator via [Hugo](http://gohugo.io/)
-- Hosting via [GitHub Pages]()
-- Continuous Deployment via [CircleCI]()
-- HTTPS via [Cloudfront]()
+- Hosting via [GitHub Pages](https://pages.github.com/)
+- Continuous Deployment via [CircleCI](https://circleci.com/)
+- HTTPS via [Cloudflare](https://www.cloudflare.com)
 
 ## Development Dependencies
 - [Go lang](https://golang.org/)
