@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+        <meta name="description" content="" />
+    
+
+    
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/syntax.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+    
+    <link rel="canonical" href="https://www.sacredseedstudio.com/tutorials/interacting-with-json-in-unity/" />
+
+    
+    <link rel="icon" type="image/x-icon" href="https://www.sacredseedstudio.com/favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="https://www.sacredseedstudio.com/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://www.sacredseedstudio.com/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://www.sacredseedstudio.com/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://www.sacredseedstudio.com/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://www.sacredseedstudio.com/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://www.sacredseedstudio.com/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://www.sacredseedstudio.com/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://www.sacredseedstudio.com/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.sacredseedstudio.com/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="https://www.sacredseedstudio.com/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.sacredseedstudio.com/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://www.sacredseedstudio.com/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.sacredseedstudio.com/icons/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="https://www.sacredseedstudio.com/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#000000">
+
+    
+    
+        <link href="https://www.sacredseedstudio.com/index.xml" rel="alternate" type="application/rss+xml" title="Sacred Seed Studio" />
+    
+    
+
+
+    <title> Interacting with JSON in Unity &middot;  Sacred Seed Studio</title>
+
+    
+    <meta property="og:title" content=" Interacting with JSON in Unity &middot;  Sacred Seed Studio" />
+    <meta property="og:site_name" content="Sacred Seed Studio" />
+    <meta property="og:url" content="https://www.sacredseedstudio.com/tutorials/interacting-with-json-in-unity/" />
+
+    
+        <meta property="og:type" content="article" />
+        <meta property="og:article:published_time" content="2017-06-10T13:27:39-03:00" />
+        
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@sacredseedstdio" />
+        <meta name="twitter:creator" content="@sacredseedstdio" />
+        <meta name="twitter:title" content="Interacting with JSON in Unity" />
+        <meta name="twitter:description" content="" />
+        <meta name="twitter:url" content="https://www.sacredseedstudio.com/tutorials/interacting-with-json-in-unity/" />
+    
+
+</head>
+
+<body>
+    <header>
+        <div class="title-wrap">
+            <a href="/">
+                <img src="https://www.sacredseedstudio.com/images/logo_dark.png" alt="Sacred Seed Studio Logo">
+            </a>
+        </div>
+        <ul>
+        
+        
+            <li class="blog "><a href="/blog/">Blog</a></li>
+        
+            <li class="gallery "><a href="/gallery/">Gallery</a></li>
+        
+            <li class="games "><a href="/games/">Games</a></li>
+        
+            <li class="tutorials  active"><a href="/tutorials/">Tutorials</a></li>
+        
+        </ul>
+    </header>
+
+    
+        <main class="tutorials">
+    
+
+
+    <header>
+        <h1>Interacting with JSON in Unity</h1>
+        
+        <h3>
+            Jun 10, 2017
+
+            
+             • Joel Kuntz
+            
+        </h3>
+        <h5>Read in 4m</h5>
+        
+            <ul>
+                
+                    <li><a href="/categories/unity">unity</a></li>
+                
+                    <li><a href="/categories/json">json</a></li>
+                
+                    <li><a href="/categories/tutorial">tutorial</a></li>
+                
+            </ul>
+        
+    </header>
+
+    <article>
+        <p>Oftentimes we find ourselves working with JSON data. Whether it&rsquo;s communicating with a web server or importing and exporting data. The solution is either had to write your own parser/serializer or get a third party plugin. Semi-recently the JsonUtility class was introduced in the UnityEngine namespace. It won&rsquo;t solve all of your problems, but it is a great built in tool. This tutorial builds a simple example to demonstrate handling JSON.
+</p>
+
+<p>The focus is on the data found on <a href="https://jsonplaceholder.typicode.com">https://jsonplaceholder.typicode.com</a> this allows us to use a live server and have a real world use case. If this server ever goes down you can use the <a href="https://github.com/Sacred-Seed-Studio/tutorials/tree/master/interacting-with-json-in-unity/Assets/Data">backup data</a>. This is by no means a tutorial about web request best practices in unity, but does show a real world use case for JSON.</p>
+
+<p class="note">This is a git friendly tutorial. You can follow the steps by clicking the commit link in the header. You can see the <a href="https://github.com/Sacred-Seed-Studio/tutorials/tree/master/interacting-with-json-in-unity">completed project here.</a> Darker screenshots are in Play mode.</p>
+  
+
+<h3 id="setup">Setup</h3>
+
+<h4 id="unity-a545ebe-https-github-com-sacred-seed-studio-tutorials-commit-a545ebe0aa3c840e5f1df5253eaa0eae93187d6c">Unity <a href="https://github.com/Sacred-Seed-Studio/tutorials/commit/a545ebe0aa3c840e5f1df5253eaa0eae93187d6c">a545ebe</a></h4>
+
+<p>Setup a new unity project or open an existing one.</p>
+
+<h4 id="data-structures-c1e22b3-https-github-com-sacred-seed-studio-tutorials-commit-c1e22b33ae55feea013457a572f4264bcc72e76c">Data Structures <a href="https://github.com/Sacred-Seed-Studio/tutorials/commit/c1e22b33ae55feea013457a572f4264bcc72e76c">c1e22b3</a></h4>
+
+<p>To start we will create two data structures to match a Post and User. You can check out their json response at the urls below:<br />
+<a href="https://jsonplaceholder.typicode.com/users/1">https://jsonplaceholder.typicode.com/users/1</a><br />
+<a href="https://jsonplaceholder.typicode.com/posts/1">https://jsonplaceholder.typicode.com/posts/1</a></p>
+
+<p>Structs are used for simplicity, but this could be a class with a constructor and ToString override.</p>
+<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="c1">// Assets/DataStructures/Post.cs</span>
+<span class="na">[System.Serializable]</span>
+<span class="k">public</span> <span class="k">struct</span> <span class="nc">Post</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="kt">int</span> <span class="n">userId</span><span class="p">;</span>
+    <span class="k">public</span> <span class="kt">int</span> <span class="n">id</span><span class="p">;</span>
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">title</span><span class="p">;</span>
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">body</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Assets/DataStructures/User.cs</span>
+<span class="na">[System.Serializable]</span>
+<span class="k">public</span> <span class="k">struct</span> <span class="nc">GeoCoords</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="kt">float</span> <span class="n">lat</span><span class="p">;</span>
+    <span class="k">public</span> <span class="kt">float</span> <span class="n">lng</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="na">[System.Serializable]</span>
+<span class="k">public</span> <span class="k">struct</span> <span class="nc">Address</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">street</span><span class="p">;</span>
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">suite</span><span class="p">;</span>
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">city</span><span class="p">;</span>
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">zipcode</span><span class="p">;</span>
+    <span class="k">public</span> <span class="n">GeoCoords</span> <span class="n">geo</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="na">[System.Serializable]</span>
+<span class="k">public</span> <span class="k">struct</span> <span class="nc">Company</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">name</span><span class="p">;</span>
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">catchPhrase</span><span class="p">;</span>
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">bs</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="na">[System.Serializable]</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">User</span> 
+<span class="p">{</span>
+    <span class="k">public</span> <span class="kt">int</span> <span class="n">id</span><span class="p">;</span>
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">name</span><span class="p">;</span>
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">email</span><span class="p">;</span>
+    <span class="k">public</span> <span class="n">Address</span> <span class="n">address</span><span class="p">;</span>
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">phone</span><span class="p">;</span>
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">website</span><span class="p">;</span>
+    <span class="k">public</span> <span class="n">Company</span> <span class="n">company</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h4 id="api-f7a01a2-https-github-com-sacred-seed-studio-tutorials-commit-f7a01a275a5666744b5754b525bed8a3634190a4">API <a href="https://github.com/Sacred-Seed-Studio/tutorials/commit/f7a01a275a5666744b5754b525bed8a3634190a4">f7a01a2</a></h4>
+
+<p>Next, create an API class. Used to store the base url of the server; this will help prevent typos and other weird bugs in the code.</p>
+<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="c1">// Assets/API/API.cs</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">API</span> 
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="n">baseURL</span> <span class="p">=</span> <span class="s">&quot;https://jsonplaceholder.typicode.com&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="simple-example-019ba2f-https-github-com-sacred-seed-studio-tutorials-commit-019ba2fdb8a289dc88bf678110d63ee452da241f">Simple Example <a href="https://github.com/Sacred-Seed-Studio/tutorials/commit/019ba2fdb8a289dc88bf678110d63ee452da241f">019ba2f</a></h3>
+
+<p>For a simple example, make a new C# MonoBehaviour and attach it to an empty game object.
+This script will make a GET request to fetch a post and a user. These requests can later be customized.</p>
+
+<p>The following are used:</p>
+
+<ul>
+<li><a href="https://docs.unity3d.com/ScriptReference/WWW.html">WWW</a><br /></li>
+<li><a href="https://docs.unity3d.com/ScriptReference/JsonUtility.html">JsonUtility</a><br /></li>
+<li><a href="https://docs.unity3d.com/Manual/Coroutines.html">Coroutines</a><br /></li>
+</ul>
+<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="c1">// Assets/SimpleExample/SimpleExample.cs</span>
+<span class="k">using</span> <span class="nn">System.Collections</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">UnityEngine</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">SimpleExample</span> <span class="p">:</span> <span class="n">MonoBehaviour</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="n">User</span> <span class="n">user</span><span class="p">;</span>
+    <span class="k">public</span> <span class="n">Post</span> <span class="n">post</span><span class="p">;</span>
+
+    <span class="k">void</span> <span class="nf">Start</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">StartCoroutine</span><span class="p">(</span><span class="n">LoadPost</span><span class="p">());</span>
+        <span class="n">StartCoroutine</span><span class="p">(</span><span class="n">LoadUser</span><span class="p">());</span>
+    <span class="p">}</span>
+
+    <span class="n">IEnumerator</span> <span class="nf">LoadPost</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">WWW</span> <span class="n">www</span> <span class="p">=</span> <span class="k">new</span> <span class="n">WWW</span><span class="p">(</span><span class="n">API</span><span class="p">.</span><span class="n">baseURL</span> <span class="p">+</span> <span class="s">&quot;/posts/1&quot;</span><span class="p">);</span>
+        <span class="k">yield</span> <span class="k">return</span> <span class="n">www</span><span class="p">;</span>
+        <span class="n">post</span> <span class="p">=</span> <span class="n">JsonUtility</span><span class="p">.</span><span class="n">FromJson</span><span class="p">&lt;</span><span class="n">Post</span><span class="p">&gt;(</span><span class="n">www</span><span class="p">.</span><span class="n">text</span><span class="p">);</span>
+        <span class="n">Debug</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="s">&quot;Post: &quot;</span> <span class="p">+</span> <span class="n">www</span><span class="p">.</span><span class="n">text</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="n">IEnumerator</span> <span class="nf">LoadUser</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">WWW</span> <span class="n">www</span> <span class="p">=</span> <span class="k">new</span> <span class="n">WWW</span><span class="p">(</span><span class="n">API</span><span class="p">.</span><span class="n">baseURL</span> <span class="p">+</span> <span class="s">&quot;/users/1&quot;</span><span class="p">);</span>
+        <span class="k">yield</span> <span class="k">return</span> <span class="n">www</span><span class="p">;</span>
+        <span class="n">user</span> <span class="p">=</span> <span class="n">JsonUtility</span><span class="p">.</span><span class="n">FromJson</span><span class="p">&lt;</span><span class="n">User</span><span class="p">&gt;(</span><span class="n">www</span><span class="p">.</span><span class="n">text</span><span class="p">);</span>
+        <span class="n">Debug</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="s">&quot;User: &quot;</span> <span class="p">+</span> <span class="n">www</span><span class="p">.</span><span class="n">text</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p><img alt="Simple Example Unity Screenshot" src="/images/tutorials/interacting-with-json-in-unity/SimpleExample.png"></p>
+
+<p>Start both example <code>Coroutines</code> in Unity&rsquo;s Start method and wach the new data appear in the inspector upon the web request completion. Pretty neat, and refreshingly simple. You could use <code>JsonUtility</code> synchronously with any string in place of www.text as well.</p>
+
+<h3 id="handling-arrays-44a5c7e-https-github-com-sacred-seed-studio-tutorials-commit-44a5c7efd617c835f2d07c5b233132c4d43b79b2">Handling Arrays <a href="https://github.com/Sacred-Seed-Studio/tutorials/commit/44a5c7efd617c835f2d07c5b233132c4d43b79b2">44a5c7e</a></h3>
+
+<p>In this second part we will deal with JSON arrays. The astute Googler will have realized that <code>JsonUtility</code> doesn&rsquo;t support top level json arrays. However this can be worked around. Create a new class <code>JsonHelper</code> which will provide a static generic function that returns an array. This wraps the json array in a new private generic object <code>JsonArrayWrapper</code>. This is based off of <a href="https://forum.unity3d.com/threads/how-to-load-an-array-with-jsonutility.375735/#post-2585129">a post on the unity forums</a>.</p>
+
+<p><img alt="Handling Arrays Unity Screenshot" src="/images/tutorials/interacting-with-json-in-unity/HandlingArrays.png"></p>
+<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="c1">// Assets/HandlingArrays/JsonHelper.cs</span>
+<span class="k">using</span> <span class="nn">UnityEngine</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">JsonHelper</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="n">T</span><span class="p">[]</span> <span class="n">getJsonArray</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;(</span><span class="kt">string</span> <span class="n">json</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">string</span> <span class="n">newJson</span> <span class="p">=</span> <span class="s">&quot;{ \&quot;array\&quot;: &quot;</span> <span class="p">+</span> <span class="n">json</span> <span class="p">+</span> <span class="s">&quot;}&quot;</span><span class="p">;</span>
+        <span class="n">JSONArrayWrapper</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span> <span class="n">wrapper</span> <span class="p">=</span> <span class="n">JsonUtility</span><span class="p">.</span><span class="n">FromJson</span><span class="p">&lt;</span><span class="n">JSONArrayWrapper</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;&gt;(</span><span class="n">newJson</span><span class="p">);</span>
+        <span class="k">return</span> <span class="n">wrapper</span><span class="p">.</span><span class="n">array</span><span class="p">;</span>
+    <span class="p">}</span>
+
+<span class="na">    [System.Serializable]</span>
+    <span class="k">private</span> <span class="k">class</span> <span class="nc">JSONArrayWrapper</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span>
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="n">T</span><span class="p">[]</span> <span class="n">array</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Actual usage is quite similar to JsonUtility:</p>
+<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="c1">// Assets/HandlingArrays/HandlingArrays.cs</span>
+<span class="k">using</span> <span class="nn">UnityEngine</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">HandlingArrays</span> <span class="p">:</span> <span class="n">MonoBehaviour</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="n">User</span><span class="p">[]</span> <span class="n">users</span><span class="p">;</span>
+
+    <span class="k">void</span> <span class="nf">Start</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">StartCoroutine</span><span class="p">(</span><span class="n">LoadUsers</span><span class="p">());</span>
+    <span class="p">}</span>
+
+    <span class="n">IEnumerator</span> <span class="nf">LoadUsers</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">WWW</span> <span class="n">www</span> <span class="p">=</span> <span class="k">new</span> <span class="n">WWW</span><span class="p">(</span><span class="n">API</span><span class="p">.</span><span class="n">baseURL</span> <span class="p">+</span> <span class="s">&quot;/users&quot;</span><span class="p">);</span>
+        <span class="k">yield</span> <span class="k">return</span> <span class="n">www</span><span class="p">;</span>
+        <span class="n">users</span> <span class="p">=</span> <span class="n">JsonHelper</span><span class="p">.</span><span class="n">getJsonArray</span><span class="p">&lt;</span><span class="n">User</span><span class="p">&gt;(</span><span class="n">www</span><span class="p">.</span><span class="n">text</span><span class="p">);</span>
+        <span class="n">Debug</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="s">&quot;Users: &quot;</span> <span class="p">+</span> <span class="n">www</span><span class="p">.</span><span class="n">text</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="exporting-data-e98b737-https-github-com-sacred-seed-studio-tutorials-commit-e98b737b053ec4a16ee61cd4eee97d87359adab0">Exporting Data <a href="https://github.com/Sacred-Seed-Studio/tutorials/commit/e98b737b053ec4a16ee61cd4eee97d87359adab0">e98b737</a></h3>
+
+<p>Finally, to showcase how to turn raw data into JSON. We will make a POST request to the server simulating creation of a post. This part will vary depending on the format your server expects. Next send a request to <a href="https://jsonplaceholder.typicode.com/posts">https://jsonplaceholder.typicode.com/posts</a> with a byte array containing the JSON version of our struct.</p>
+
+<p>Let the server know we are sending it JSON via the Content-Type header with the json mime type. When the request finishes, the id in the inspector changes.</p>
+<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="c1">// Assets/ExportingData/ExportingData.cs</span>
+<span class="k">using</span> <span class="nn">UnityEngine</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Text</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">ExportingData</span> <span class="p">:</span> <span class="n">MonoBehaviour</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="n">Post</span> <span class="n">post</span><span class="p">;</span>
+
+    <span class="k">void</span> <span class="nf">Start</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">StartCoroutine</span><span class="p">(</span><span class="n">CreatePost</span><span class="p">());</span>
+    <span class="p">}</span>
+
+    <span class="n">IEnumerator</span> <span class="nf">CreatePost</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">string</span><span class="p">&gt;</span> <span class="n">headers</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">string</span><span class="p">&gt;();</span>
+        <span class="n">headers</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;Content-Type&quot;</span><span class="p">,</span> <span class="s">&quot;application/json&quot;</span><span class="p">);</span>
+
+        <span class="kt">byte</span><span class="p">[]</span> <span class="n">postData</span> <span class="p">=</span> <span class="n">Encoding</span><span class="p">.</span><span class="n">ASCII</span><span class="p">.</span><span class="n">GetBytes</span><span class="p">(</span><span class="n">JsonUtility</span><span class="p">.</span><span class="n">ToJson</span><span class="p">(</span><span class="n">post</span><span class="p">));</span>
+
+        <span class="n">WWW</span> <span class="n">www</span> <span class="p">=</span> <span class="k">new</span> <span class="n">WWW</span><span class="p">(</span><span class="n">API</span><span class="p">.</span><span class="n">baseURL</span> <span class="p">+</span> <span class="s">&quot;/posts&quot;</span><span class="p">,</span> <span class="n">postData</span><span class="p">,</span> <span class="n">headers</span><span class="p">);</span>
+
+        <span class="k">yield</span> <span class="k">return</span> <span class="n">www</span><span class="p">;</span>
+
+        <span class="n">Debug</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="s">&quot;Created a Post: &quot;</span> <span class="p">+</span> <span class="n">www</span><span class="p">.</span><span class="n">text</span><span class="p">);</span>
+        <span class="n">post</span> <span class="p">=</span> <span class="n">JsonUtility</span><span class="p">.</span><span class="n">FromJson</span><span class="p">&lt;</span><span class="n">Post</span><span class="p">&gt;(</span><span class="n">www</span><span class="p">.</span><span class="n">text</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p><img alt="Exporting Data Unity Screenshot" src="/images/tutorials/interacting-with-json-in-unity/ExportingData.png"></p>
+    </article>
+
+    <div class="share">
+    <h4>Share this!</h4>
+    <a href="https://twitter.com/intent/tweet?text=Interacting%20with%20JSON%20in%20Unity&url=https%3a%2f%2fwww.sacredseedstudio.com%2ftutorials%2finteracting-with-json-in-unity%2f&via=sacredseedstdio" target="_blank" title="Twitter">
+        <svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg"><title>Twitter</title><g fill="none" fill-rule="evenodd"><path d="M.106.183h55.127V55.31H.106V.183z" fill="#00ACED"/><path d="M37.09 21.016c-.728.352-1.504.58-2.325.685.837-.538 1.48-1.387 1.784-2.404-.784.497-1.65.852-2.575 1.06-.735-.85-1.79-1.38-2.95-1.38-2.234 0-4.045 1.946-4.045 4.354 0 .338.035.673.102.988-3.355-.174-6.34-1.914-8.336-4.544-.346.642-.545 1.388-.545 2.19 0 1.506.714 2.848 1.8 3.617-.663-.026-1.287-.21-1.832-.54v.06c0 2.105 1.395 3.862 3.245 4.27-.34.097-.698.143-1.07.143-.258 0-.505-.018-.755-.078.513 1.737 2.008 2.998 3.777 3.023-1.385 1.174-3.128 1.864-5.023 1.864-.328 0-.65-.02-.966-.06 1.79 1.24 3.912 1.964 6.2 1.964 7.44 0 11.51-6.638 11.51-12.39 0-.186-.004-.372-.013-.558.79-.623 1.476-1.39 2.018-2.262" fill="#FFF"/></g></svg>
+    </a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.sacredseedstudio.com%2ftutorials%2finteracting-with-json-in-unity%2f" target="_blank" title="Facebook">
+        <svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg"><title>Facebook</title><g fill="none" fill-rule="evenodd"><path d="M.32.183h55.127V55.31H.32V.183z" fill="#3B5998"/><path d="M32.446 24.287h-3.108V22.25c0-.766.507-.945.865-.945h2.192V17.94l-3.02-.01c-3.352 0-4.114 2.508-4.114 4.114v2.243h-1.938v3.467h1.94v9.81h4.076v-9.81h2.75l.358-3.467" fill="#FFF"/></g></svg>
+    </a>
+    <a href="https://plus.google.com/share?url=https%3a%2f%2fwww.sacredseedstudio.com%2ftutorials%2finteracting-with-json-in-unity%2f" target="_blank" title="Google+">
+        <div class="google">
+            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414" fill="white"><g><path d="M5.09 7.273v1.745H7.98c-.116.75-.873 2.197-2.887 2.197-1.737 0-3.155-1.44-3.155-3.215S3.353 4.785 5.09 4.785c.99 0 1.652.422 2.03.786l1.382-1.33c-.887-.83-2.037-1.33-3.41-1.33C2.275 2.91 0 5.184 0 8s2.276 5.09 5.09 5.09c2.94 0 4.888-2.065 4.888-4.974 0-.334-.036-.59-.08-.843H5.09zM16 7.273h-1.455V5.818H13.09v1.455h-1.454v1.454h1.455v1.455h1.455V8.727H16"/></g></svg>
+        </div>
+    </a>
+    <a href="https://reddit.com/submit/?url=https%3a%2f%2fwww.sacredseedstudio.com%2ftutorials%2finteracting-with-json-in-unity%2f&title=Interacting%20with%20JSON%20in%20Unity" target="_blank" title="Reddit">
+        <div class="reddit">
+            <svg viewBox="0 0 32 32"><path stroke="none" fill="white" d="M8 20c0-1.105 0.895-2 2-2s2 0.895 2 2c0 1.105-0.895 2-2 2s-2-0.895-2-2zM20 20c0-1.105 0.895-2 2-2s2 0.895 2 2c0 1.105-0.895 2-2 2s-2-0.895-2-2zM20.097 24.274c0.515-0.406 1.262-0.317 1.668 0.198s0.317 1.262-0.198 1.668c-1.434 1.13-3.619 1.86-5.567 1.86s-4.133-0.73-5.567-1.86c-0.515-0.406-0.604-1.153-0.198-1.668s1.153-0.604 1.668-0.198c0.826 0.651 2.46 1.351 4.097 1.351s3.271-0.7 4.097-1.351zM32 16c0-2.209-1.791-4-4-4-1.504 0-2.812 0.83-3.495 2.057-2.056-1.125-4.561-1.851-7.29-2.019l2.387-5.36 4.569 1.319c0.411 1.167 1.522 2.004 2.83 2.004 1.657 0 3-1.343 3-3s-1.343-3-3-3c-1.142 0-2.136 0.639-2.642 1.579l-5.091-1.47c-0.57-0.164-1.173 0.116-1.414 0.658l-3.243 7.282c-2.661 0.187-5.102 0.907-7.114 2.007-0.683-1.227-1.993-2.056-3.496-2.056-2.209 0-4 1.791-4 4 0 1.635 0.981 3.039 2.387 3.659-0.252 0.751-0.387 1.535-0.387 2.341 0 5.523 6.268 10 14 10s14-4.477 14-10c0-0.806-0.134-1.589-0.387-2.34 1.405-0.62 2.387-2.025 2.387-3.66zM27 5.875c0.621 0 1.125 0.504 1.125 1.125s-0.504 1.125-1.125 1.125-1.125-0.504-1.125-1.125 0.504-1.125 1.125-1.125zM2 16c0-1.103 0.897-2 2-2 0.797 0 1.487 0.469 1.808 1.145-1.045 0.793-1.911 1.707-2.552 2.711-0.735-0.296-1.256-1.016-1.256-1.856zM16 29.625c-6.42 0-11.625-3.414-11.625-7.625s5.205-7.625 11.625-7.625c6.42 0 11.625 3.414 11.625 7.625s-5.205 7.625-11.625 7.625zM28.744 17.856c-0.641-1.003-1.507-1.918-2.552-2.711 0.321-0.676 1.011-1.145 1.808-1.145 1.103 0 2 0.897 2 2 0 0.84-0.52 1.56-1.256 1.856z"></path></svg>
+        </div>
+    </a>
+</div>
+
+    
+
+</main>
+
+<footer>
+    <a href="https://github.com/Sacred-Seed-Studio" target="_blank" title="GitHub" class="github">
+        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414" fill="#fff"><path d="M8 0C3.58 0 0 3.582 0 8c0 3.535 2.292 6.533 5.47 7.59.4.075.547-.172.547-.385 0-.19-.007-.693-.01-1.36-2.226.483-2.695-1.073-2.695-1.073-.364-.924-.89-1.17-.89-1.17-.725-.496.056-.486.056-.486.803.056 1.225.824 1.225.824.714 1.223 1.873.87 2.33.665.072-.517.278-.87.507-1.07-1.777-.2-3.644-.888-3.644-3.953 0-.873.31-1.587.823-2.147-.084-.202-.36-1.015.076-2.117 0 0 .672-.215 2.2.82.638-.178 1.323-.266 2.003-.27.68.004 1.363.092 2.002.27 1.527-1.035 2.198-.82 2.198-.82.437 1.102.163 1.915.08 2.117.513.56.823 1.274.823 2.147 0 3.073-1.87 3.75-3.653 3.947.287.245.543.734.543 1.48 0 1.07-.01 1.932-.01 2.194 0 .215.144.463.55.385C13.71 14.53 16 11.533 16 8c0-4.418-3.582-8-8-8"/></svg>
+    </a>
+    <a href="https://giphy.com/channel/sacredseedstudio" target="_blank" title="Giphy" class="giphy">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250" fill-rule="evenodd" fill="#ffffff"><path d="m 171.01172,30.933594 -117.54297,0.675781 0,185.902345 154.0918,0 0,-149.578126 -18.5,0 0,-17.597656 -18.04883,0 0,-19.402344 z m -18.5,18.951172 0,36.773437 36.09766,0 0,112.353517 -116.414068,0 0,-148.902345 80.316408,-0.224609 z" style="fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" /></svg>
+    </a>
+    <a href="#" title="Top of Page" class="top">
+        <svg viewBox="0 0 48 48" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M14.83 30.83l9.17-9.17 9.17 9.17 2.83-2.83-12-12-12 12z"/><path d="M0 0h48v48h-48z" fill="none"/></svg>
+    </a>
+    <a href="https://twitter.com/sacredseedstdio" target="_blank" title="Twitter" class="twitter">
+        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414" fill="#fff"><path d="M16 3.038c-.59.26-1.22.437-1.885.517.677-.407 1.198-1.05 1.443-1.816-.634.374-1.337.647-2.085.794-.598-.638-1.45-1.036-2.396-1.036-1.812 0-3.282 1.468-3.282 3.28 0 .258.03.51.085.75C5.152 5.39 2.733 4.084 1.114 2.1.83 2.583.67 3.147.67 3.75c0 1.14.58 2.143 1.46 2.732-.538-.017-1.045-.165-1.487-.41v.04c0 1.59 1.13 2.918 2.633 3.22-.276.074-.566.114-.865.114-.21 0-.415-.02-.616-.058.418 1.304 1.63 2.253 3.067 2.28-1.123.88-2.54 1.404-4.076 1.404-.265 0-.526-.015-.783-.045 1.454.93 3.18 1.474 5.033 1.474 6.038 0 9.34-5 9.34-9.337 0-.143-.004-.284-.01-.425.64-.463 1.198-1.04 1.638-1.7z" fill-rule="nonzero"/></svg>
+    </a>
+    <a href="https://www.youtube.com/channel/UCiHXUY1-_UOk45rqR69v1gA" target="_blank" title="YouTube" class="youtube">
+        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414" fill="#fff"><path d="M0 7.345c0-1.294.16-2.59.16-2.59s.156-1.1.636-1.587c.608-.637 1.408-.617 1.764-.684C3.84 2.36 8 2.324 8 2.324s3.362.004 5.6.166c.314.038.996.04 1.604.678.48.486.636 1.588.636 1.588S16 6.05 16 7.346v1.258c0 1.296-.16 2.59-.16 2.59s-.156 1.102-.636 1.588c-.608.638-1.29.64-1.604.678-2.238.162-5.6.166-5.6.166s-4.16-.037-5.44-.16c-.356-.067-1.156-.047-1.764-.684-.48-.487-.636-1.587-.636-1.587S0 9.9 0 8.605v-1.26zm6.348 2.73V5.58l4.323 2.255-4.32 2.24z"/></svg>
+    </a>
+</footer>
+
+</body>
+</html>
