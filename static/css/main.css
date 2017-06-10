@@ -136,12 +136,12 @@ main.games article.grid-item a .img-holder {
 }
 main.games article.grid-item a .img-holder img {
   width: 100%;
-  max-height: 100px;
-  min-height: 100px;
+  max-height: 200px;
+  min-height: 200px;
   object-fit: cover;
 }
 main.games article.grid-item a .img-holder .no-img {
-  line-height: 100px;
+  line-height: 200px;
   text-align: center;
   margin: 0;
   display: flex;
@@ -366,8 +366,8 @@ path {
   fill: #e52d27 !important;
 }
 
-.gplus:hover svg {
-  fill: #DC4E41 !important;
+.giphy:hover svg {
+  fill: #00FF99 !important;
 }
 
 .github:hover svg {
