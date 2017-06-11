@@ -2,7 +2,7 @@
 title = "Setting up a Unity dev environment on Windows"
 draft = false
 date = "2016-09-25T00:00:00+00:00"
-updated = "2017-01-14T00:00:00+00:00"
+updated = "2017-06-11T00:00:00+00:00"
 image = ""
 categories = ["tutorial","unity","git","windows"]
 author = "Joel Kuntz"
@@ -24,7 +24,7 @@ The installer for Unity now has Visual Studio (Community version), where it used
 <img alt="Unity Editor Git Settings" src="/images/tutorials/unitydevenv/ChangeTextEditor.png">
 
 ### Step 2: Install Git
-Windows 10 recently added the Windows Subsystem for Linux which allows you to run Ubuntu Bash. This is my favorite way to use git on windows. You can [install WSL](http://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/) and run `sudo apt install git`, or alternatively get [native applications](https://git-scm.com/downloads) of git, including some GUI applications like [Sourcetree](https://www.sourcetreeapp.com/) or [GitHub Desktop](https://desktop.github.com/).
+Windows 10 recently added the Windows Subsystem for Linux which allows you to run Ubuntu Bash. This is my favorite way to use git on windows. You can [install WSL](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide) and run `sudo apt install git`, or alternatively get [native applications](https://git-scm.com/downloads) of git, including some GUI applications like [Sourcetree](https://www.sourcetreeapp.com/) or [GitHub Desktop](https://desktop.github.com/).
 
 <p class="note">If you aren't familiar with version control, you should be. It allows you to backup your project, tag points in time that can be referenced later, and easily work with a team or on an open source project. I can't overstate this! Please trust me when I say it will save you from frustration in the future. <a href="https://git-scm.com/book/en/v2">Learn git</a> and go backup your projects now. Both <a href="https://github.com/">github</a> and <a href="https://bitbucket.org/">bitbucket</a> offer good free options.</p>
 
