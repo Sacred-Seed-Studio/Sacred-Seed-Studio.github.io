@@ -50,7 +50,7 @@ My very first compo! Timing was different this time around, with only two days t
 
 I spent Sunday finishing the UI and adding smaller details, and finishing the game play. I saved the last 6 hours for making music. This was my first time actually making any music for a game, or anything really. I used Bosca Ceoil, and I love it! I actually finished my game 2 hours before the deadline. But it took me almost 3 hours to get my build, my source and my Ludum Dare submission ready. The servers went down just minutes before I tried to submit my game, so I had to wait until later in the night to actually complete the submission.
 
-## Conlusion
+## Conclusion
 So with Ludum Dare 39, I've completed one whole years worth of Ludum Dare. And it feels great, I love getting feedback on my games, and I love seeing what the rest of the community has built. It's great to see the different ways the theme is interpreted, and there are always lots of top notch games. The community is really nice, and very supportive whether you're on your first jam or your 10th! Some days it's difficult to see the progress I've made, but looking at all four of the games at the same time really brings it out.
 
 I can't wait to keep participating in Ludum Dare, Global Game jams and any other game jams I find :)  
