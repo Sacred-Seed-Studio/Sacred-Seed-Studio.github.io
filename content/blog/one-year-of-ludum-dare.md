@@ -1,7 +1,7 @@
 +++
 date = "2017-08-05T3:10:00-04:00"
 title = "One Year of Ludum Dare"
-categories = ["game jam"]
+categories = ["game-jam"]
 author = "Sarah"
 draft = false
 
