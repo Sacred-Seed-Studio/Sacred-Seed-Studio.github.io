@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.sacredseedstudio.com/blog/2017/08/05/one-year-of-ludum-dare</loc>
+    <lastmod>2017-08-05T03:10:00-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.sacredseedstudio.com/tutorials/interacting-with-json-in-unity/</loc>
     <lastmod>2017-06-10T13:27:39-03:00</lastmod>
   </url>
@@ -189,7 +194,7 @@
   
   <url>
     <loc>https://www.sacredseedstudio.com/blog/</loc>
-    <lastmod>2017-01-15T12:28:58-04:00</lastmod>
+    <lastmod>2017-08-05T03:10:00-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -205,8 +210,8 @@
   </url>
   
   <url>
-    <loc>https://www.sacredseedstudio.com/categories/gamejam/</loc>
-    <lastmod>2016-03-05T00:00:00+00:00</lastmod>
+    <loc>https://www.sacredseedstudio.com/categories/game-jam/</loc>
+    <lastmod>2017-08-05T03:10:00-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -236,7 +241,7 @@
   
   <url>
     <loc>https://www.sacredseedstudio.com/</loc>
-    <lastmod>2017-06-10T13:27:39-03:00</lastmod>
+    <lastmod>2017-08-05T03:10:00-04:00</lastmod>
     <priority>0</priority>
   </url>
   

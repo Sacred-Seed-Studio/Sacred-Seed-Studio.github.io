@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Game Jam on Sacred Seed Studio</title>
+    <link>https://www.sacredseedstudio.com/categories/game-jam/index.xml</link>
+    <description>Recent content in Game Jam on Sacred Seed Studio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.sacredseedstudio.com/categories/game-jam/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>One Year of Ludum Dare</title>
+      <link>https://www.sacredseedstudio.com/blog/2017/08/05/one-year-of-ludum-dare</link>
+      <pubDate>Sat, 05 Aug 2017 03:10:00 -0400</pubDate>
+      
+      <guid>https://www.sacredseedstudio.com/blog/2017/08/05/one-year-of-ludum-dare</guid>
+      <description>&lt;p&gt;This past year, from August 2016-2017, I participated in each Ludum Dare! I worked on three jams, and my first compo! I&amp;rsquo;ve made 4 different games, two by myself and two with Joel! We also did Ludum Dare 32, our very first Ludum Dare jam in April 2015.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;ludum-dare-32-an-unconvential-weapon-plan-it-http-ludumdare-com-compo-ludum-dare-32-action-preview-uid-51130&#34;&gt;&lt;a href=&#34;http://ludumdare.com/compo/ludum-dare-32/?action=preview&amp;amp;uid=51130&#34;&gt;Ludum Dare 32 - An Unconvential Weapon - Plan.IT&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;img alt=&#34;Ideas are flowing&#34; src=&#34;https://www.sacredseedstudio.com/images/blog/one-year-of-ludum-dare/LD32.jpg&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;We used assets from Kenney and an online planet generator for our graphics and we never actually finished the game itself. The idea was to collect resources from planets along the way to a Hackathon. And upon arriving to the hackathon, use the resources to build something and win! We finished the resource collecting mini game, but that&amp;rsquo;s as far as we got!&lt;/p&gt;
+
+&lt;h2 id=&#34;ludum-dare-36-ancient-technology-choose-your-fate-http-ludumdare-com-compo-ludum-dare-36-action-preview-uid-113517&#34;&gt;&lt;a href=&#34;http://ludumdare.com/compo/ludum-dare-36/?action=preview&amp;amp;uid=113517&#34;&gt;Ludum Dare 36 - Ancient Technology - Choose Your Fate&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;img alt=&#34;Ideas are flowing&#34; src=&#34;https://www.sacredseedstudio.com/images/blog/one-year-of-ludum-dare/LD36.gif&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;I forgot about Ludum Dare until Saturday night when I decided to start anyways! I worked by myself and I didn&amp;rsquo;t really have an idea. My main goal for this jam was to build an inventory system, and a dialogue system. I finished both! But then there was literally nothing else to do. I played around trying to build a cutscene at the beginning to [sort-of] have a story.&lt;/p&gt;
+
+&lt;p&gt;The characters all had randomized names and personalities, which determined their dialogue options. At the beginning of each game, you could choose between two random characters. Spoiler alert, your choice had no effect!&lt;/p&gt;
+
+&lt;p&gt;I didn&amp;rsquo;t have a playable game, but I did have a world where you could talk to snobby NPCs. But hey, don&amp;rsquo;t touch strange technology in the woods, it&amp;rsquo;s not my fault!&lt;/p&gt;
+
+&lt;h2 id=&#34;ludum-dare-37-one-room-hacker-cafe-http-ludumdare-com-compo-ludum-dare-37-action-preview-uid-113517&#34;&gt;&lt;a href=&#34;http://ludumdare.com/compo/ludum-dare-37/?action=preview&amp;amp;uid=113517&#34;&gt;Ludum Dare 37 - One Room - Hacker Cafe&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;img alt=&#34;Ideas are flowing&#34; src=&#34;https://www.sacredseedstudio.com/images/blog/one-year-of-ludum-dare/LD37.gif&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;Joel and I worked together on this game, and we actually finished! Our first complete Ludum Dare game! We took a lot of inspiration from Reigns, and had definitely been watching a lot of Mr.Robot&amp;hellip; We were very happy with the final outcome, it&amp;rsquo;s still a potential game that we might work on again. We completed the things we had hoped to; which were, a notification system, and loading in the story line/options with json and scriptable objects.&lt;/p&gt;
+
+&lt;p&gt;This was the first game that we made where we used our own graphics. We also used Google material icons. We tried not to let our lack of artistic ability stop us from making our own game! We didn&amp;rsquo;t have enough content, because we ran out of time to create more. The notifications get reptative fairly quickly, so that needed to be deepened quite a bit. The feedback we got on this game was really great, a lot of people really liked it.&lt;/p&gt;
+
+&lt;h2 id=&#34;ludum-dare-38-a-small-world-village-builder-https-ldjam-com-events-ludum-dare-38-the-tiny-village&#34;&gt;&lt;a href=&#34;https://ldjam.com/events/ludum-dare/38/the-tiny-village&#34;&gt;Ludum Dare 38 - A Small World - Village Builder&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;img alt=&#34;Ideas are flowing&#34; src=&#34;https://www.sacredseedstudio.com/images/blog/one-year-of-ludum-dare/LD38.gif&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;Yay, new Ludum Dare website! This was a mostly finished, but not finished, entry. Our goal was to create a small world builder. A small sandbox to design a village and see what your rank was. We used Kenney assets again but we had a limited amount of things. We used what we had, and I worked on my UI skills. I generated an isometric grid of grass, and trees around the edges, the player had a set amount of money to build the village, but in the end I just gave the player way more money than they would ever need :) Just for fun!&lt;/p&gt;
+
+&lt;p&gt;We were really busy that weekend so we didn&amp;rsquo;t have a lot of time to work on the game, so part way through we cut our scope. Originally, the goal was to keep your village thriving over many days, and slowly build it up and make money etc. But we didn&amp;rsquo;t have the time to build those systems, so we changed the idea to just build a village in one go :) It all worked out.&lt;/p&gt;
+
+&lt;h2 id=&#34;ludum-dare-39-running-out-of-power-power-tripping-https-ldjam-com-events-ludum-dare-39-power-tripping-keeping-it-cool&#34;&gt;&lt;a href=&#34;https://ldjam.com/events/ludum-dare/39/power-tripping-keeping-it-cool&#34;&gt;Ludum Dare 39 - Running out of Power - Power Tripping&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;img alt=&#34;Ideas are flowing&#34; src=&#34;https://www.sacredseedstudio.com/images/blog/one-year-of-ludum-dare/LD39.gif&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;My very first compo! Timing was different this time around, with only two days to build. I started Friday night at midnight after deciding not to participate, until I read the theme and instantly had an idea. The best ideas always happen once you&amp;rsquo;ve decided not to join in. It was pretty late, so naturally I stayed up until 6 getting things started. The bulk of the game was finished in the first hours, all the graphics and base scripting. I added UI Saturday before going to a party :P&lt;/p&gt;
+
+&lt;p&gt;I spent Sunday finishing the UI and adding smaller details, and finishing the game play. I saved the last 6 hours for making music. This was my first time actually making any music for a game, or anything really. I used Bosca Ceoil, and I love it! I actually finished my game 2 hours before the deadline. But it took me almost 3 hours to get my build, my source and my Ludum Dare submission ready. The servers went down just minutes before I tried to submit my game, so I had to wait until later in the night to actually complete the submission.&lt;/p&gt;
+
+&lt;h2 id=&#34;conlusion&#34;&gt;Conlusion&lt;/h2&gt;
+
+&lt;p&gt;So with Ludum Dare 39, I&amp;rsquo;ve completed one whole years worth of Ludum Dare. And it feels great, I love getting feedback on my games, and I love seeing what the rest of the community has built. It&amp;rsquo;s great to see the different ways the theme is interpreted, and there are always lots of top notch games. The community is really nice, and very supportive whether you&amp;rsquo;re on your first jam or your 10th! Some days it&amp;rsquo;s difficult to see the progress I&amp;rsquo;ve made, but looking at all four of the games at the same time really brings it out.&lt;/p&gt;
+
+&lt;p&gt;I can&amp;rsquo;t wait to keep participating in Ludum Dare, Global Game jams and any other game jams I find :)&lt;br /&gt;
+Don&amp;rsquo;t forget to keep creating!&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Global Game Jam 2016 Postmortem</title>
+      <link>https://www.sacredseedstudio.com/blog/2016/03/05/global-game-jam-2016-postmortem</link>
+      <pubDate>Sat, 05 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.sacredseedstudio.com/blog/2016/03/05/global-game-jam-2016-postmortem</guid>
+      <description>&lt;p&gt;To introduce us and finally launch our website we decided what better way then to do a postmortem of Global Game Jam 2016!&lt;/p&gt;
+
+&lt;p&gt;For our second GGJ together we decided to focus on a smaller game, which allowed us to actually complete it this year! For the theme: Ritual, we created a game where you are in charge of collecting holy water for your village each day. To complete the ritual, you must pray to different gods each day to grant access to the river water.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&#34;Ideas are flowing&#34; src=&#34;https://www.sacredseedstudio.com/images/blog/ggj2016/start.jpg&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&#34;Ritual River Spritesheet&#34; src=&#34;https://www.sacredseedstudio.com/images/blog/ggj2016/title.png&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;This year&amp;rsquo;s jam was again hosted at Volta, this time at their new location (which was awesome!). A huge thank you to everyone involved setting it up, as it was a great place to jam and meet new people.&lt;/p&gt;
+
+&lt;p&gt;Our goal in this first post is to talk about our experiences at the Jam and to give perspective on our process and what we learned over that weekend.&lt;/p&gt;
+
+&lt;h2 id=&#34;joel&#34;&gt;Joel&lt;/h2&gt;
+
+&lt;p&gt;A snowstorm didn&amp;rsquo;t stop us or the ~60 people at Volta for this year&amp;rsquo;s game jam. It was awesome meeting so many passionate people all there for the same goal: to have fun and make a game. This years jam went surprisingly smooth and we encountered few issues. The first issue I encountered was using GitHub&amp;rsquo;s Unity gitignore. I submitted a pull request to fix this issue months prior, but another PR was merged that undid my changes. It was frustrating and it led me having to redo the title scene three times. By the end of it I flew threw the remaking and learned a very important lesson: know how your version control is setup to avoid any unintended occurrences.
+Our workflow usually goes as follows:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Create a new project on GitHub&lt;/li&gt;
+&lt;li&gt;Setup the project with a README/LICENSE and .gitignore&lt;/li&gt;
+&lt;li&gt;Clone the project and create a new Unity project in there&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Our reasoning you ask? Sometimes we have multiple projects in one repository and this workflow works well for that. Unity doesn&amp;rsquo;t allow you to create a new project in a non empty folder. There are other workflows sure, but we are used to this one and quite like it. The solution moving forward is we now have our own &lt;a href=&#34;https://github.com/Sacred-Seed-Studio/Unity-Gitignore&#34;&gt;repository&lt;/a&gt; with a gitignore that follows our workflow.&lt;/p&gt;
+
+&lt;p&gt;Overall I learned a lot this weekend and remembered why I love programming in Unity in the first place. I look forward to finishing school and having more time to work on more projects and game jams!&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&#34;Ritual River Spritesheet&#34; src=&#34;https://www.sacredseedstudio.com/images/blog/ggj2016/game.png&#34;&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;sarah&#34;&gt;Sarah&lt;/h2&gt;
+
+&lt;p&gt;For this game jam, I admit, we didn&amp;rsquo;t do a very good job of planning. We did have one large white board which housed most of our ideas for the entire weekend. Despite not having a single &amp;lsquo;formal&amp;rsquo; document, we were able to create an entire (mostly fun) game. :)&lt;/p&gt;
+
+&lt;p&gt;Things started off pretty smoothly, and like most games, the first step was to get basic shapes moving around the screen. Then I added the main character animations and backgrounds and a game was born. The logic behind the game was fairly simple, each day began and the hero was in his village, and he would start down towards the river. A set of pedestals were scattered along the path to the river, and each day, before leaving the village, the hero would see which 3 gods he had to pray too. By praying at the matching pedestals, the gate to the river would open, and water would be available! Half of the the time spent here was working on assets, the character and gate animations and what not.&lt;/p&gt;
+
+&lt;p&gt;The only challenge left after implementing all of the above, was making some monkeys to add a challenge. In the end, when the game jam was over, the monkeys were sort of menacing (after a post game jam update, they were much MORE menacing, I promise!).&lt;/p&gt;
+
+&lt;p&gt;We ran into a weird copy/paste bug during the last hour of the game jam, while I was trying to add our audio in before the deadline. The bug was random and we weren&amp;rsquo;t able to figure it out until later in the night. But Ritual River turned out pretty great anyways and I&amp;rsquo;m satisfied with the weekend!&lt;/p&gt;
+
+&lt;h2 id=&#34;kevin&#34;&gt;Kevin&lt;/h2&gt;
+
+&lt;p&gt;I had a great time at this year’s Global Game Jam. It felt great to put all all of my focus into one thing for a whole weekend. I ended up learning a lot, and I always do during hackathons.&lt;/p&gt;
+
+&lt;p&gt;Shown below is the sprite sheet I made as the hero in our game Ritual River. Seeing as we only had 48 hours to fully complete our project, we decided it was a good idea to keep it simple. It turns out all you need to have a functioning walking animation is 20 sprites; many of which are copies. The 4  left most sprites are the idle sprites, and each other row is a direction of the walking animation. Notice how when his leg is behind the other I’ve made it slightly darker to help create the illusion of walking.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&#34;Ritual River Spritesheet&#34; src=&#34;https://www.sacredseedstudio.com/images/blog/ggj2016/sprite.png&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;I’m looking forward to our future projects so I can learn more about the basics of sprite design and making image assets for games!&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
