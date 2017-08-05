@@ -3,7 +3,7 @@ title = "Global Game Jam 2016 Postmortem"
 draft = false
 date = "2016-03-05T00:00:00+00:00"
 image = ""
-categories = ["gamejam","ggj","git"]
+categories = ["game jam","ggj","git"]
 author = ""
 class = ""
 +++
