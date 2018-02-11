@@ -234,3 +234,6 @@ public class ExportingData : MonoBehaviour
 ```
 
 <img alt="Exporting Data Unity Screenshot" src="/images/tutorials/interacting-with-json-in-unity/ExportingData.png">
+
+### Bonus: Tests [45d9558](https://github.com/Sacred-Seed-Studio/tutorials/commit/45d9558c4d7c4ca9339550172908e245d02c1a68)
+Its always good practice to write tests for your code. As we added our own custom JsonHelper we should write tests for it. This tutorial is about interacting with JSON so we won't get into the specifics here. However, you can peruse the commit above and check out the [Unity Documentation](https://docs.unity3d.com/Manual/testing-editortestsrunner.html), Happy coding!
