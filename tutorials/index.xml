@@ -230,7 +230,11 @@ This script will make a GET request to fetch a post and a user. These requests c
 &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img alt=&#34;Exporting Data Unity Screenshot&#34; src=&#34;https://www.sacredseedstudio.com/images/tutorials/interacting-with-json-in-unity/ExportingData.png&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img alt=&#34;Exporting Data Unity Screenshot&#34; src=&#34;https://www.sacredseedstudio.com/images/tutorials/interacting-with-json-in-unity/ExportingData.png&#34;&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;bonus-tests-45d9558-https-github-com-sacred-seed-studio-tutorials-commit-45d9558c4d7c4ca9339550172908e245d02c1a68&#34;&gt;Bonus: Tests &lt;a href=&#34;https://github.com/Sacred-Seed-Studio/tutorials/commit/45d9558c4d7c4ca9339550172908e245d02c1a68&#34;&gt;45d9558&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Its always good practice to write tests for your code. As we added our own custom JsonHelper we should write tests for it. This tutorial is about interacting with JSON so we won&amp;rsquo;t get into the specifics here. However, you can peruse the commit above and check out the &lt;a href=&#34;https://docs.unity3d.com/Manual/testing-editortestsrunner.html&#34;&gt;Unity Documentation&lt;/a&gt;, Happy coding!&lt;/p&gt;</description>
     </item>
     
     <item>
