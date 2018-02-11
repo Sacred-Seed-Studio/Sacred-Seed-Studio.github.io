@@ -1,5 +1,6 @@
 +++
 date = "2017-06-10T13:27:39-03:00"
+updated = "2018-02-11T00:00:00+00:00"
 title = "Interacting with JSON in Unity"
 draft = false
 categories = ["unity","json","tutorial"]
@@ -7,10 +8,10 @@ author = "Joel Kuntz"
 
 +++
 
-Oftentimes we find ourselves working with JSON data. Whether it's communicating with a web server or importing and exporting data. The solution is either had to write your own parser/serializer or get a third party plugin. Semi-recently the JsonUtility class was introduced in the UnityEngine namespace. It won't solve all of your problems, but it is a great built in tool. This tutorial builds a simple example to demonstrate handling JSON.
+Oftentimes we find ourselves working with JSON data. Whether it's communicating with a web server or importing and exporting data. Before in Unity the solutions were you had to write your own parser/serializer, or get a third party plugin. Semi-recently the JsonUtility class was introduced in the UnityEngine namespace. It won't solve all of your problems, but it is a great built in tool. This tutorial builds a simple example to demonstrate handling JSON.
 <!--more-->
 
-The focus is on the data found on https://jsonplaceholder.typicode.com this allows us to use a live server and have a real world use case. If this server ever goes down you can use the [backup data](https://github.com/Sacred-Seed-Studio/tutorials/tree/master/interacting-with-json-in-unity/Assets/Data). This is by no means a tutorial about web request best practices in unity, but does show a real world use case for JSON.
+The focus is on the data found on https://jsonplaceholder.typicode.com this allows us to use a live server and have a real world use case. If this server ever goes down you can use the [backup data](https://github.com/Sacred-Seed-Studio/tutorials/tree/master/interacting-with-json-in-unity/Assets/Data). This is by no means a tutorial about web request best practices in Unity, but does show a real world use case for JSON.
 
 
 <p class="note">This is a git friendly tutorial. You can follow the steps by clicking the commit link in the header. You can see the <a href="https://github.com/Sacred-Seed-Studio/tutorials/tree/master/interacting-with-json-in-unity">completed project here.</a> Darker screenshots are in Play mode.</p>
