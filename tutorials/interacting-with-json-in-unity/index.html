@@ -57,6 +57,16 @@
         <meta property="og:type" content="article" />
         <meta property="og:article:published_time" content="2017-06-10T13:27:39-03:00" />
         
+            <meta property="og:article:tag" content="unity" />
+        
+            <meta property="og:article:tag" content="json" />
+        
+            <meta property="og:article:tag" content="tutorial" />
+        
+        
+        <meta property="og:image" content="https://www.sacredseedstudio.com//images/tutorials/interacting-with-json-in-unity/interacting-with-json-in-unity-cover.png"> 
+        <meta name="twitter:image" content="https://www.sacredseedstudio.com//images/tutorials/interacting-with-json-in-unity/interacting-with-json-in-unity-cover.png" />
+        
 
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@sacredseedstdio" />
@@ -119,6 +129,28 @@
     </header>
 
     <article>
+        <h3>Table of Contents</h3>
+        <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#setup">Setup</a>
+<ul>
+<li><a href="#unity-a545ebe-https-github-com-sacred-seed-studio-tutorials-commit-a545ebe0aa3c840e5f1df5253eaa0eae93187d6c">Unity <a href="https://github.com/Sacred-Seed-Studio/tutorials/commit/a545ebe0aa3c840e5f1df5253eaa0eae93187d6c">a545ebe</a></a></li>
+<li><a href="#data-structures-c1e22b3-https-github-com-sacred-seed-studio-tutorials-commit-c1e22b33ae55feea013457a572f4264bcc72e76c">Data Structures <a href="https://github.com/Sacred-Seed-Studio/tutorials/commit/c1e22b33ae55feea013457a572f4264bcc72e76c">c1e22b3</a></a></li>
+<li><a href="#api-f7a01a2-https-github-com-sacred-seed-studio-tutorials-commit-f7a01a275a5666744b5754b525bed8a3634190a4">API <a href="https://github.com/Sacred-Seed-Studio/tutorials/commit/f7a01a275a5666744b5754b525bed8a3634190a4">f7a01a2</a></a></li>
+</ul></li>
+<li><a href="#simple-example-019ba2f-https-github-com-sacred-seed-studio-tutorials-commit-019ba2fdb8a289dc88bf678110d63ee452da241f">Simple Example <a href="https://github.com/Sacred-Seed-Studio/tutorials/commit/019ba2fdb8a289dc88bf678110d63ee452da241f">019ba2f</a></a></li>
+<li><a href="#handling-arrays-44a5c7e-https-github-com-sacred-seed-studio-tutorials-commit-44a5c7efd617c835f2d07c5b233132c4d43b79b2">Handling Arrays <a href="https://github.com/Sacred-Seed-Studio/tutorials/commit/44a5c7efd617c835f2d07c5b233132c4d43b79b2">44a5c7e</a></a></li>
+<li><a href="#exporting-data-e98b737-https-github-com-sacred-seed-studio-tutorials-commit-e98b737b053ec4a16ee61cd4eee97d87359adab0">Exporting Data <a href="https://github.com/Sacred-Seed-Studio/tutorials/commit/e98b737b053ec4a16ee61cd4eee97d87359adab0">e98b737</a></a></li>
+<li><a href="#bonus-tests-45d9558-https-github-com-sacred-seed-studio-tutorials-commit-45d9558c4d7c4ca9339550172908e245d02c1a68">Bonus: Tests <a href="https://github.com/Sacred-Seed-Studio/tutorials/commit/45d9558c4d7c4ca9339550172908e245d02c1a68">45d9558</a></a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+        <hr>
         <p>Oftentimes we find ourselves working with JSON data. Whether it&rsquo;s communicating with a web server or importing and exporting data. Before in Unity the solutions were you had to write your own parser/serializer, or get a third party plugin. Semi-recently the JsonUtility class was introduced in the UnityEngine namespace. It won&rsquo;t solve all of your problems, but it is a great built in tool. This tutorial builds a simple example to demonstrate handling JSON.
 </p>
 
