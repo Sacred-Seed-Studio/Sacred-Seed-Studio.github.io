@@ -1,6 +1,10 @@
 <article class="flex-item flex-col-container">
     <header class="">
-        <a href="{{ .Permalink }}" class="header-link">
+        {{ if .Params.no_link }}
+        <a class="header-link" title="{{ .Title }}">
+        {{ else }}
+        <a class="header-link" href="{{if .Params.direct_link }}{{ .Params.direct_link }}{{else}}{{ .Permalink }}{{end}}" title="{{ .Title }}">
+        {{ end }}
             {{ if .Params.image }}
             <div class="image-header" style="background-image: url({{ .Site.BaseURL }}{{ .Params.image }});"></div>
             {{ else }}
@@ -9,12 +13,6 @@
             <h2>{{ .Title }}</h2>
             <p>
                 {{ .Date.Format "Jan 2, 2006" }}
-    
-                {{ if .Params.author }}
-                    • <span class="post-author">{{ .Params.author }}</span>
-                {{ end }}
-    
-                    • Read in {{ .ReadingTime }}m
             </p>
         </a>
 
@@ -29,7 +27,10 @@
     <div class="post-description ">
         {{ .Summary }}
     </div>
+    {{ if .Params.no_link }}
+    {{else}}
     <div class="continue ">
-        <p><a href="{{ .Permalink }}" class="continue">Continue reading...</a></p>
+        <p><a href="{{if .Params.direct_link }}{{ .Params.direct_link }}{{else}}{{ .Permalink }}{{end}}" class="continue">Play Now</a></p>
     </div>
+    {{ end }}
 </article>

@@ -3,7 +3,7 @@ title = "Setting up a Unity dev environment on Windows"
 draft = false
 date = "2016-09-25T00:00:00+00:00"
 updated = "2017-06-11T00:00:00+00:00"
-image = ""
+image = "images/tutorials/unitydevenv/unity-windows-dev-environment-cover.png"
 categories = ["tutorial","unity","git","windows"]
 author = "Joel Kuntz"
 

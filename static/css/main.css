@@ -345,9 +345,26 @@ footer a svg use {
   justify-content: center;
 }
 
+.flex-col-container {
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  /* height: 100%; */
+}
+
 .flex-item {
   -webkit-flex: 1 0 100%;
   flex: 1 0 100%;
+}
+
+.flex-col-item {
+	-webkit-flex: 1 0 auto;
+	flex: 1 0 auto;
+}
+
+.flex-item.flex-col-container .continue {
+  margin-top: auto;
 }
 
 path {
@@ -389,6 +406,21 @@ path {
 }
 .pagination a {
   padding: 0 10px;
+}
+.image-header {
+  background-color: #666;
+  background-image: url(/images/article_bg.png);
+  width: 100%;
+  height: 10rem;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 1rem;
+}
+.header-link {
+  color: inherit;
+}
+#TableOfContents ul {
+  list-style: none;
 }
 
 /*@media (max-width: 400px) {

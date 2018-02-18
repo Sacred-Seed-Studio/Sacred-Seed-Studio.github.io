@@ -5,6 +5,7 @@ title = "Interacting with JSON in Unity"
 draft = false
 categories = ["unity","json","tutorial"]
 author = "Joel Kuntz"
+image = "/images/tutorials/interacting-with-json-in-unity/interacting-with-json-in-unity-cover.png"
 
 +++
 

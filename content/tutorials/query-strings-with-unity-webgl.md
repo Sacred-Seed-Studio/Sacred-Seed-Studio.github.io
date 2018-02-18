@@ -2,7 +2,7 @@
 draft = false
 date = "2016-11-03T00:00:00+00:00"
 updated = "2017-01-14T00:00:00+00:00"
-image = ""
+image = "/images/tutorials/queryString/query-string-paramater-cover.png"
 categories = ["tutorial","unity","webgl"]
 author = "Joel Kuntz"
 title = "Query Strings (Parameters) with Unity WebGL"

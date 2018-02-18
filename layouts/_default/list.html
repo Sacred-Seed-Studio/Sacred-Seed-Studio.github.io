@@ -1,8 +1,10 @@
 {{ partial "header.html" . }}
 
+    <div class="flex-container">
     {{ range .Paginator.Pages }}
         {{ .Render "li"}}
     {{ end }}
+    </div>
 
     <div class="pagination">
         <p>{{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}</p>
