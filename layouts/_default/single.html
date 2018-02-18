@@ -23,9 +23,11 @@
     </header>
 
     <article>
-        <h3>Table of Contents</h3>
-        {{ .TableOfContents }}
-        <hr>
+        {{ if .TableOfContents }}
+            <h3>Table of Contents</h3>
+            {{ .TableOfContents }}
+            <hr>
+        {{end}}
         {{ .Content }}
     </article>
 
